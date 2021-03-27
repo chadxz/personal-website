@@ -1,0 +1,35 @@
+{
+  "name": "personal-website",
+  "version": "1.0.0",
+  "main": "index.js",
+  "private": true,
+  "scripts": {
+    "build": "eleventy",
+    "serve": "eleventy --serve",
+    "format": "prettier --write \"**/*.{md,html,json,yml}\""
+  },
+  "author": "Chad McElligott <chad.mcelligott@gmail.com>",
+  "devDependencies": {
+    "@11ty/eleventy": "^0.12.1",
+    "date-fns": "^2.19.0",
+    "husky": "^4.3.8",
+    "lint-staged": "^10.5.4",
+    "prettier": "^2.2.1"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "*.json": [
+      "prettier --write"
+    ],
+    "*.md": [
+      "prettier --write"
+    ],
+    "*.yml": [
+      "prettier --write"
+    ]
+  }
+}
