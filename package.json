@@ -11,6 +11,7 @@
   "author": "Chad McElligott <chad.mcelligott@gmail.com>",
   "devDependencies": {
     "@11ty/eleventy": "^0.12.1",
+    "@11ty/eleventy-plugin-rss": "^1.1.1",
     "date-fns": "^2.19.0",
     "husky": "^4.3.8",
     "lint-staged": "^10.5.4",
