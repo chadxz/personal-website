@@ -1,0 +1,12 @@
+footer {
+  display: flex;
+  justify-content: center;
+}
+form[name="subscribe"] {
+  padding: 15px;
+  border: 1px solid #cccccc;
+  align-self: center;
+}
+form[name="subscribe"] p {
+  margin-top: 0;
+}
