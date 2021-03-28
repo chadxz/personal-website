@@ -9,7 +9,7 @@ I'm Chad and this is my site.
 ## Posts
 
 <ul>
-{% for post in collections.posts %}
+{% for post in collections.posts | reverse %}
 <li>
     <a href="{{ post.url }}">
         <time>{{ post.date | formatDate }}</time> - {{ post.data.title }}
