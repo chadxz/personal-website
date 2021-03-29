@@ -128,11 +128,11 @@ good quality registrar. I have numerous domains I have purchased with them
 throughout the years and have never had any issues. When I went to choose the
 domain, I knew I wanted a `.dev` domain because I like that they are https only
 and stands for "developer" (hey, that's me!). I chose `chadxz.dev` because
-`chadxz` is [my Github username][], it was available and cheap, and it felt like a
-good fit.
+`chadxz` is [my Github username][], it was available and cheap, and it felt like
+a good fit.
 
 [namecheap]: https://www.namecheap.com
-[my Github username]: https://github.com/chadxz
+[my github username]: https://github.com/chadxz
 
 After purchasing my domain, I moved the DNS over to [Netlify DNS][] service.
 Using the Netlify DNS is free and is configurable if you want to set up

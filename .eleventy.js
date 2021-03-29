@@ -1,19 +1,34 @@
 'use strict';
 const { format } = require('date-fns');
 const pluginRss = require('@11ty/eleventy-plugin-rss');
+const ErrorOverlay = require('eleventy-plugin-error-overlay');
+const now = Date.now().toString();
 
 module.exports = function (eleventyConfig) {
+  eleventyConfig.addPlugin(ErrorOverlay);
   eleventyConfig.addPlugin(pluginRss);
-
-  eleventyConfig.addPassthroughCopy('style.css');
 
   eleventyConfig.addFilter('formatDate', function (value) {
     return format(value, 'yyyy-MM-dd');
   });
 
+  eleventyConfig.addShortcode('version', () => now);
+
+  eleventyConfig.setBrowserSyncConfig({
+    ...eleventyConfig.browserSyncConfig,
+    files: ['build/dist/style.css'],
+    ghostMode: false,
+    injectChanges: false,
+    reloadDelay: 500
+  });
+
   return {
     markdownTemplateEngine: 'njk',
     dataTemplateEngine: 'njk',
-    htmlTemplateEngine: 'njk'
-  }
+    htmlTemplateEngine: 'njk',
+    dir: {
+      input: 'src',
+      output: 'build/dist',
+    },
+  };
 };

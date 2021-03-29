@@ -1,0 +1,12 @@
+[build]
+publish = "build/dist"
+command = "npm run build"
+
+[[headers]]
+for = "/*"
+
+[headers.values]
+Content-Security-Policy = "default-src 'self';"
+X-Content-Type-Options = "nosniff"
+X-Frame-Options = "deny"
+X-XSS-Protection = "1; mode=block"
