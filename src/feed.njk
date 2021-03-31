@@ -4,25 +4,27 @@ eleventyExcludeFromCollections: true
 ---
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-    {% set absoluteFeedUrl %}{{ permalink | url | absoluteUrl(meta.siteUrl) }}{% endset %}
+    {% set absoluteFeedUrl %}{{ permalink | url | absoluteUrl(meta.url) }}{% endset %}
     <title>{{ meta.title }}</title>
     <subtitle>{{ meta.subtitle }}</subtitle>
     <link href="{{ absoluteFeedUrl }}" rel="self"/>
     <link href="{{ absoluteFeedUrl }}"/>
     <updated>{{ collections.posts | getNewestCollectionItemDate | dateToRfc3339 }}</updated>
-    <id>{{ meta.siteUrl }}</id>
+    <id>{{ meta.url }}</id>
     <author>
         <name>{{ meta.author.name }}</name>
         <email>{{ meta.author.email }}</email>
     </author>
     {%- for post in collections.posts | reverse %}
-        {% set absolutePostUrl %}{{ post.url | url | absoluteUrl(meta.siteUrl) }}{% endset %}
+        {% set absolutePostUrl %}{{ post.url | url | absoluteUrl(meta.url) }}{% endset %}
         <entry>
             <title>{{ post.data.title }}</title>
             <link href="{{ absolutePostUrl }}"/>
             <updated>{{ post.date | dateToRfc3339 }}</updated>
             <id>{{ absolutePostUrl }}</id>
-            <content type="html">{{ post.templateContent | htmlToAbsoluteUrls(absolutePostUrl) }}</content>
+            <content type="html"><![CDATA[
+                {{ post.templateContent | htmlToAbsoluteUrls(absolutePostUrl) | safe }}
+            ]]></content>
         </entry>
     {%- endfor %}
 </feed>

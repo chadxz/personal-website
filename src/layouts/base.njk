@@ -1,13 +1,16 @@
+{%- set absolutePageUrl -%}{{ page.url | url | absoluteUrl(meta.url) }}{%- endset -%}
+
 <!doctype html>
 <html lang="en">
 <head>
     <meta charset="utf-8">
     <title>Chad McElligott</title>
     <meta name="description" content="">
+    <link rel="canonical" href="{{ absolutePageUrl }}">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="robots" content="index,follow,noodp">
     <meta name="googlebot" content="index,follow">
-    <link rel="alternate" type="application/atom+xml" title="Atom Feed for chadxz.dev" href="/feed.xml" />
+    <link rel="alternate" type="application/atom+xml" title="{{ meta.title }}" href="/feed.xml" />
     <link rel="stylesheet" href="/style.css?v={% version %}" type="text/css" media="all" />
 </head>
 

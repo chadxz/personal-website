@@ -12,7 +12,7 @@
     "serve": "npm-run-all --parallel build:css:watch build:html:watch",
     "format": "prettier --write \"**/*.{md,html,json,yml,js}\""
   },
-  "author": "Chad McElligott <chad.mcelligott@gmail.com>",
+  "author": "Chad McElligott <chad@chadxz.dev>",
   "devDependencies": {
     "@11ty/eleventy": "^0.12.1",
     "@11ty/eleventy-plugin-rss": "^1.1.1",
