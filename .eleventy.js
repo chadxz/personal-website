@@ -8,8 +8,8 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addPlugin(ErrorOverlay);
   eleventyConfig.addPlugin(pluginRss);
 
-  eleventyConfig.addFilter('formatDate', function (value) {
-    return format(value, 'yyyy-MM-dd');
+  eleventyConfig.addFilter('formatDate', function (value, spec) {
+    return format(value, spec);
   });
 
   eleventyConfig.addShortcode('version', () => now);
@@ -22,6 +22,7 @@ module.exports = function (eleventyConfig) {
     reloadDelay: 500
   });
 
+  eleventyConfig.addPassthroughCopy('src/humans.txt');
   return {
     markdownTemplateEngine: 'njk',
     dataTemplateEngine: 'njk',

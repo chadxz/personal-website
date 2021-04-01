@@ -1,0 +1,10 @@
+# humanstxt.org/
+# The humans responsible & technology colophon
+
+# TEAM
+
+    Chad McElligott -- @chadmcelligott
+
+# TECHNOLOGY COLOPHON
+
+    11ty, tailwind css, postcss, netlify
