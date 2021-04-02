@@ -23,6 +23,8 @@ module.exports = function (eleventyConfig) {
   });
 
   eleventyConfig.addPassthroughCopy('src/humans.txt');
+  eleventyConfig.addPassthroughCopy({ 'src/*.png': '/' });
+  eleventyConfig.addPassthroughCopy({ 'src/*.ico': '/' });
   return {
     markdownTemplateEngine: 'njk',
     dataTemplateEngine: 'njk',

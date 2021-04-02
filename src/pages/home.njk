@@ -1,0 +1,30 @@
+---
+permalink: index.html
+---
+
+<h1>Hey</h1>
+
+<p>I'm Chad and this is my site.</p>
+
+<div class="rounded-xl shadow-md p-5 pt-0.5 mb-10 bg-yellow-100">
+    <h4 class="font-semibold">🚧 This site is under construction! 🚧</h4>
+    <p>
+        I am building this site in the open, but as a result, it currently
+        looks half-baked. To follow along with the progress and see my plans,
+        check out the source repository at
+        <a href="https://github.com/chadxz/personal-website">
+            github.com/chadxz/personal-website</a>.
+    </p>
+</div>
+
+<h2>Posts</h2>
+
+<ul>
+{% for post in collections.posts | reverse %}
+    <li>
+        <a href="{{ post.url }}">
+            <time>{{ post.date | formatDate('yyyy-MM-dd') }}</time> - {{ post.data.title }}
+        </a>
+    </li>
+{% endfor %}
+</ul>
