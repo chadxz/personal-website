@@ -2,11 +2,17 @@
 const { format } = require('date-fns');
 const pluginRss = require('@11ty/eleventy-plugin-rss');
 const ErrorOverlay = require('eleventy-plugin-error-overlay');
+const markdownIt = require('markdown-it');
+const markdownItAnchor = require('markdown-it-anchor');
+
 const now = Date.now().toString();
 
 module.exports = function (eleventyConfig) {
   eleventyConfig.addPlugin(ErrorOverlay);
   eleventyConfig.addPlugin(pluginRss);
+
+  const markdownLib = markdownIt({ html: true, linkify: true }).use(markdownItAnchor);
+  eleventyConfig.setLibrary('md', markdownLib);
 
   eleventyConfig.addFilter('formatDate', function (value, spec) {
     return format(value, spec);
@@ -19,7 +25,7 @@ module.exports = function (eleventyConfig) {
     files: ['build/dist/style.css'],
     ghostMode: false,
     injectChanges: false,
-    reloadDelay: 500
+    reloadDelay: 500,
   });
 
   eleventyConfig.addPassthroughCopy('src/humans.txt');
@@ -34,7 +40,7 @@ module.exports = function (eleventyConfig) {
       output: 'build/dist',
       includes: 'includes',
       layouts: 'layouts',
-      data: 'data'
+      data: 'data',
     },
   };
 };
