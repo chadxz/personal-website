@@ -37,4 +37,32 @@ use a tool.
 
 With that said, lets jump in.
 
-## Use Async/Await for Asynchronous Code
+### Watch 👀: Fastify and Redwood
+
+I have been keeping my eye on, and intend to try at some point in the future,
+two other frameworks: [Fastify] and [Redwood].
+
+[Fastify] has been around for a while, but has recently been showing up on my
+radar more and more. It can be thought of as a 1:1 replacement for Express. It
+has done a lot to learn from the lessons of Express but move the ecosystem
+forward, such as by providing direct support for both async route handlers and
+Typescript. Its benchmarks claim to be the fastest web application framework in
+its field, and the developer ergonomics look like they would be familiar to a
+developer used to working with Express. My main concern with Fastify is that it
+suffers a similar problem as Hapi: the lack of the massive addon ecosystem
+Express enjoys. Some exploration on this front is needed to determine if it
+would be suitable, and preferable, to use.
+
+[Redwood] is a much different beast. It aims to build on the "[JAMStack]"
+concept by providing a backend deployable on FaaS providers like [Netlify
+Functions]. It is also opinionated about using GraphQL on the backend and React
+on the frontend. It wraps this entire Developer experience up in a nice package
+that is meant to feel as productive as working in a framework like Ruby on
+Rails. This framework is in its infancy, but I think it shows potential, so I'm
+watching it and intend to try it out to explore the viability of building with
+it in the future.
+
+[fastify]: https://www.fastify.io
+[redwood]: https://redwoodjs.com
+[jamstack]: https://jamstack.org
+[netlify functions]: https://www.netlify.com/products/functions/

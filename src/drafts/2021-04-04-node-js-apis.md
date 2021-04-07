@@ -6,12 +6,12 @@ permalink:
 
 # My Node.js API Best Practices in 2021
 
-I've been writing Rest APIs in Node.js, Ruby, and PHP for years. Over time, I've
-experimented with different frameworks, tools, and practices, all with the goal
-to simplify both the development and consumption of these services. At work,
-we're largely beginning to settle on Node.js across the company, so in this
-article I want to share what I feel are the best tools to build Node.js APIs
-in 2021.
+I've been writing Rest APIs in Node.js, Ruby, and PHP for nearly 8 years. Over
+time, I've experimented with different frameworks, tools, and practices, all
+with the goal to simplify both the development and consumption of these
+services. At work, we're largely beginning to settle on Node.js across the
+company, so in this article I want to share what I feel are the best tools to
+build Node.js APIs in 2021.
 
 I say "in 2021" because the concept of a "best practice" is a constantly moving
 target. As we build we learn, but the ecosystem is also shifting under our feet.
@@ -122,6 +122,11 @@ best way to learn which to use here is to look at open source applications. Some
 examples I can recommend are [sahat/hackathon-starter][hackathon-starter] and
 [TryGhost/ghost][ghost].
 
+One drawback of using Express, though, is the need for an additional module to
+provide an async/await-friendly way to write your route handlers. I use
+[express-async-handler] package for this, but it would be nice if they would
+bake this directly into the framework.
+
 [http-server]: https://nodejs.org/api/http.html#http_class_http_server
 [express.js]: https://expressjs.com
 [state-of-js]:
@@ -129,36 +134,7 @@ examples I can recommend are [sahat/hackathon-starter][hackathon-starter] and
 [openjsf]: https://openjsf.org
 [hackathon-starter]: https://github.com/sahat/hackathon-starter
 [ghost]: https://github.com/TryGhost/Ghost
-
-### Watch 👀: Fastify and Redwood
-
-I have been keeping my eye on, and intend to try at some point in the future,
-two other frameworks: [Fastify] and [Redwood].
-
-[Fastify] has been around for a while, but has recently been showing up on my
-radar more and more. It can be thought of as a 1:1 replacement for Express. It
-has done a lot to learn from the lessons of Express but move the ecosystem
-forward, such as by providing direct support for both async route handlers and
-Typescript. Its benchmarks claim to be the fastest web application framework in
-its field, and the developer ergonomics look like they would be familiar to a
-developer used to working with Express. My main concern with Fastify is that it
-suffers a similar problem as Hapi: the lack of the massive addon ecosystem
-Express enjoys. Some exploration on this front is needed to determine if it
-would be suitable, and preferable, to use.
-
-[Redwood] is a much different beast. It aims to build on the "[JAMStack]"
-concept by providing a backend deployable on FaaS providers like [Netlify
-Functions]. It is also opinionated about using GraphQL on the backend and React
-on the frontend. It wraps this entire Developer experience up in a nice package
-that is meant to feel as productive as working in a framework like Ruby on
-Rails. This framework is in its infancy, but I think it shows potential, so I'm
-watching it and intend to try it out to explore the viability of building with
-it in the future.
-
-[fastify]: https://www.fastify.io
-[redwood]: https://redwoodjs.com
-[jamstack]: https://jamstack.org
-[netlify functions]: https://www.netlify.com/products/functions/
+[express-async-handler]: https://github.com/Abazhenov/express-async-handler
 
 ## Use `node-config` for Configuration Management
 
@@ -231,7 +207,18 @@ Here's hoping more quality OpenAPI tools arrive in the Node.js community.
 
 ## Use Objection for your MySQL Database ORM
 
-Mongoose for MongoDB, watching Prisma
+I've used a few different ORMs in the time I've been writing code in Node.js:
+Waterline, Mongoose, Sequelize, Bookshelf, and now Objection. I have also
+eschewed ORMs entirely and directly used Knex to build my database-connected
+models. Of all these approaches, my favorite so far is using Objection.
+
+[Objection] is an ORM for SQL databases. It is a thin layer on top of Knex,
+providing just enough of an abstraction to lend a hand with building models and
+the relationships between them. It is thoroughly documented and feels ergonomic
+to program with. It keeps the best parts of Knex available where you need them.
+For now, I'll be using Objection when I am building a SQL-backed app.
+
+[objection]: https://vincit.github.io/objection.js/
 
 ## Use JSON Logging in Production
 
