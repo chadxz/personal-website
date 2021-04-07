@@ -112,6 +112,11 @@ good choice for any kind of web application. It is being well maintained, is
 under the stewardship of the [OpenJS Foundation][openjsf], and is largely
 considered to be a stable basis to build atop.
 
+One drawback of using Express, though, is the need for an additional module to
+provide an async/await-friendly way to write your route handlers. I use
+[express-async-handler] package for this, but it would be nice if they would
+bake this directly into the framework.
+
 The [Express.js documentation][express.js] is a solid resource for learning how
 to get up and running with the framework. If you are interested in a book,
 [Express in Action](https://amzn.to/3dG6boC) appears good (Note: I have not read
@@ -122,11 +127,6 @@ best way to learn which to use here is to look at open source applications. Some
 examples I can recommend are [sahat/hackathon-starter][hackathon-starter] and
 [TryGhost/ghost][ghost].
 
-One drawback of using Express, though, is the need for an additional module to
-provide an async/await-friendly way to write your route handlers. I use
-[express-async-handler] package for this, but it would be nice if they would
-bake this directly into the framework.
-
 [http-server]: https://nodejs.org/api/http.html#http_class_http_server
 [express.js]: https://expressjs.com
 [state-of-js]:
@@ -135,6 +135,47 @@ bake this directly into the framework.
 [hackathon-starter]: https://github.com/sahat/hackathon-starter
 [ghost]: https://github.com/TryGhost/Ghost
 [express-async-handler]: https://github.com/Abazhenov/express-async-handler
+
+## Deploy your Application as a Docker Container
+
+To me, [Docker] is about consistency. When deploying an application to a remote
+server, ideally you would not require any dependencies or configuration... you
+could simply push your binary to the server and run it with no arguments and it
+would behave exactly as you expect. Unfortunately, the reality is far from this
+ideal. Most applications require some form of configuration, and Node.js
+applications additionally require the Node.js runtime and package dependencies
+to be installed at the minimum.
+
+By packaging your application as a Docker container, you not only bundle all of
+the dependencies it requires into a single executable Docker "image", but you
+also can deploy it onto a system alongside a mix of other applications that
+don't necessarily use the same Node.js version, or Node.js at all! In addition
+to the convenience of a single consistent package, you can also package your
+application to adhere to the typical "Docker" contract: that is, writing your
+logs to STDOUT and exposing your application's listening ports via the
+Dockerfile `expose` keyword. The result is that many of the typical operational
+concerns you have to deal with when managing a web application on a linux
+environment are standardized to reduce the cognitive burden of maintaining them.
+
+There are many providers that support using Docker images to run your
+application directly. Docker now has built-in support for running your
+application on AWS ECS / AWS Fargate, but if you wanted to run the host
+yourself, I recommend using [Ansible] to provision the host, setup the Docker
+runtime, and deploy the application.
+
+Using Docker also provides an easy way for developers collaborate on a given
+application using Windows, Linux, or MacOS as their desktop environment. Having
+all the packages installed within the Docker image largely eliminates the "works
+on my machine" problem, but some care does have to be taken for applications
+that have to be reloaded when their code changes.
+
+To learn Docker, I primarily relied on the [Docker online
+documentation][docker-docs]. There are also myriad tutorials and classes
+available online.
+
+[docker]: https://www.docker.com
+[ansible]: https://www.ansible.com
+[docker-docs]: https://docs.docker.com/get-started/
 
 ## Use `node-config` for Configuration Management
 
@@ -220,13 +261,27 @@ For now, I'll be using Objection when I am building a SQL-backed app.
 
 [objection]: https://vincit.github.io/objection.js/
 
-## Use JSON Logging in Production
-
-Bunyan, watching Pino
-
 ## Report Your Errors Somewhere You Can See Them
 
-Airbrake at work, Sentry at home.
+Errors do happen. The key is that you will want to know about them so you can
+fix them!
+
+At work, we use [Airbrake] for our error reporting. It is a reasonable service
+and has served our needs sufficiently. For my personal projects, I prefer
+[Sentry]. It is similar in functionality and allows you to either use their
+cloud service or self-host the server that the errors are reported to.
+
+For either of the above services, the general method for using them is the same.
+You create the client and register them to listen for errors in your
+application, and when they happen, the errors are sent to an aggregation system
+for reporting and alerting.
+
+I wholeheartedly recommend using some sort of error reporting in every Node.js
+application. Pick one and implement it, and you will be in a much better
+position to support your application for your users.
+
+[airbrake]: https://airbrake.io
+[sentry]: https://sentry.io/welcome/
 
 ## Use a Model-Service-Controller Pattern
 
@@ -240,10 +295,6 @@ Set it up once, let it guide you and keep you from thinking about this stuff.
 ## Use Jest to Test your Code
 
 Rough edges, but batteries included and mostly good.
-
-## Deploy your Application as a Docker Container
-
-Consistency in production helps a lot.
 
 ## What about Typescript?
 
