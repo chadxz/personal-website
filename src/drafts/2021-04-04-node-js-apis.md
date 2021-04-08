@@ -283,11 +283,6 @@ position to support your application for your users.
 [airbrake]: https://airbrake.io
 [sentry]: https://sentry.io/welcome/
 
-## Use a Model-Service-Controller Pattern
-
-Use Models for data access and query modeling, services to bind models together
-an execute business logic, and controllers for the web-bindings. Fat services.
-
 ## Use ESLint, Standard and Prettier to Lint and Fix your Code
 
 Set it up once, let it guide you and keep you from thinking about this stuff.
