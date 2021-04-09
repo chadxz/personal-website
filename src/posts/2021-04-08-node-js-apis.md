@@ -1,7 +1,7 @@
 ---
-date:
-title:
-permalink:
+date: 2021-04-08T17:00:00.00-05:00
+title: My Node.js API Best Practices in 2021
+permalink: 2021-node-api-best-practices/
 ---
 
 # My Node.js API Best Practices in 2021
@@ -10,8 +10,8 @@ I've been writing Rest APIs in Node.js, Ruby, and PHP for nearly 8 years. Over
 time, I've experimented with different frameworks, tools, and practices, all
 with the goal to simplify both the development and consumption of these
 services. At work, we're largely beginning to settle on Node.js across the
-company, so in this article I want to share what I feel are the best tools to
-build Node.js APIs in 2021.
+company, so in this article I want to share what I feel are some of the best
+tools and practices to build Node.js APIs in 2021.
 
 I say "in 2021" because the concept of a "best practice" is a constantly moving
 target. As we build we learn, but the ecosystem is also shifting under our feet.
@@ -25,8 +25,8 @@ a "snapshot" of the practices that work well for me today.
 Around 2011-2013, the concept of a [12-factor] app made the rounds. Originally
 written by Adam Wiggins who was then working with Heroku, the site describes
 guidelines for building applications that are designed to be run in the cloud.
-Even nearly a decade later, these guidelines are still largely applicable to the
-web software that we build today. Key ideas covered include:
+Nearly a decade later, these guidelines are still largely applicable to the web
+software that we build today. Key ideas covered include:
 
 - Dropping reliance on flat files for configuration, logs, state, etc.
 - Using a deployment model that explicitly manages dependencies
@@ -83,8 +83,13 @@ The primary architectural constraints of a RESTful web API are:
    along with the request (think: cookies)
 3. **cacheable** responses, improving client performance and server stability
 4. a **layered system**, where the client cannot distinguish if it is speaking
-   directly to your API or if an intermediary such as a reverse proxy is present
+   directly to your API or if an intermediary such as a proxy is present
 5. a **uniform interface** providing a consistent user experience
+
+These principals are relevant because they inform much of the design of the web
+as we know it, as well as many of what are considered standard practices today.
+Understanding these things will help you make good decisions when building web
+APIs and know when certain patterns deviate from the norm.
 
 Some resources I used to learn the fundamentals of RESTful web API design are
 the corresponding [Wikipedia article], the [resfulapi.net] tutorial, and the
@@ -100,9 +105,9 @@ book [RESTful Web APIs] by Leonard Richardson & Mike Amundsen.
 While it is possible to build a web application in Node.js using only the
 built-in functionality the [standard library][http-server] provides, you will
 end up writing a lot of code that is common to every web application and is
-sometimes tricky to get right (authentication and sessions, for example). Using
-a web framework allows you to be more productive by abstracting away these
-common concerns and giving you powerful patterns to build on top of.
+sometimes tricky to get right (such as routing and error handling). Using a web
+framework allows you to be more productive by abstracting away these common
+concerns and giving you powerful patterns to build on top of.
 
 [Express.js] has been the de-facto standard for building Node.js web
 applications for a long time. The [State of Javascript survey][state-of-js]
@@ -110,7 +115,7 @@ found it to be the most used Javascript web framework by a large margin for the
 past 4 years. The wide breadth of libraries and addons for Express make it a
 good choice for any kind of web application. It is being well maintained, is
 under the stewardship of the [OpenJS Foundation][openjsf], and is largely
-considered to be a stable basis to build atop.
+considered to be a stable basis to build upon.
 
 One drawback of using Express, though, is the need for an additional module to
 provide an async/await-friendly way to write your route handlers. I use
@@ -136,7 +141,7 @@ examples I can recommend are [sahat/hackathon-starter][hackathon-starter] and
 [ghost]: https://github.com/TryGhost/Ghost
 [express-async-handler]: https://github.com/Abazhenov/express-async-handler
 
-## Deploy your Application as a Docker Container
+## Deploy Your Application as a Docker Container
 
 To me, [Docker] is about consistency. When deploying an application to a remote
 server, ideally you would not require any dependencies or configuration... you
@@ -211,30 +216,29 @@ high-level web framework that is handling configuration management for you.
 [env-vars]: https://12factor.net/config
 [node-config]: https://github.com/lorenwest/node-config
 
-## Use `express-openapi` for Swagger Docs
+## Use `express-openapi` For Swagger Docs
 
 API Documentation is difficult to keep up-to-date, but is nevertheless important
 for any non-trivial application. [Swagger], or more precisely [OpenAPI
 3][openapi], is a format for specifying the API contract of a web API. When I
-use it, we define our API endpoints, authentication, inputs and outputs in a
-YAML file. This file can then be shared with your API consumers using [Swagger
-UI] to provide rich documentation and _an interactive UI_ for trying out the
-API!
+use it, I define my API endpoints, authentication, inputs and outputs in a YAML
+file. This file can then be shared with my API consumers using [Swagger UI] to
+provide rich documentation and _an interactive UI_ for trying out the API!
 
 To ensure that this specification stays in sync with the actual application
 endpoints, I use the [express-openapi] library to build the main Express API
 router, request/response validation, and authentication mechanisms directly from
 the OpenAPI specification file. This tight coupling gives me 100% confidence
 that my documentation is up-to-date. The built-in JSON Schema validation and
-type coercion removes much of the boilerplate required to start working with
-your API inputs, and the response validation lets you know if any of your
-responses stray from your established contract.
+type coercion removes much of the boilerplate required to start working with my
+API inputs, and the response validation lets me know if any of my responses
+stray from my established contract.
 
 Overall though, I wish there were better support for Swagger and OpenAPI in the
 Node.js ecosystem. While I do like express-openapi, it is primarily run by a
-single maintainer, which is not viable long-term. We occasionally run across
-bugs in the framework too, such as [issues parsing `$ref`][ref bug] or [request
-data not being coerced properly][coerce bug]. But overall, it is the best tool
+single maintainer, which is not viable long-term. I occasionally run across bugs
+in the framework too, such as [issues parsing `$ref`][ref bug] or [request data
+not being coerced properly][coerce bug]. But overall, it is the best tool
 available that I'm aware of, and I would much rather use it even under these
 conditions than go back to not having the OpenAPI documentation.
 
@@ -249,7 +253,7 @@ Here's hoping more quality OpenAPI tools arrive in the Node.js community.
 [coerce bug]: https://github.com/kogosoftwarellc/open-api/issues/710
 [swagger ui]: https://swagger.io/tools/swagger-ui/
 
-## Use Objection for your MySQL Database ORM
+## Use Objection for Your MySQL Database ORM
 
 I've used a few different ORMs in the time I've been writing code in Node.js:
 Waterline, Mongoose, Sequelize, Bookshelf, and now Objection. I have also
@@ -286,7 +290,7 @@ position to support your application for your users.
 [airbrake]: https://airbrake.io
 [sentry]: https://sentry.io/welcome/
 
-## Lint and Automatically Format your Code
+## Lint and Automatically Format Your Code
 
 In most languages there is the concept of a "[linter]": a tool that checks your
 code for problems. The problems that a linter looks for are issues that a normal
@@ -332,7 +336,7 @@ keep you from thinking about this stuff any more!
 [husky]: https://github.com/typicode/husky
 [lint-staged]: https://github.com/okonet/lint-staged
 
-## Use Jest to Test your Code
+## Use Jest to Test Your Code
 
 There are dozens of test frameworks available in the Javascript ecosystem. This
 is great! Having the ability to choose which one matches your mental model
@@ -363,18 +367,18 @@ Test your code! And use Jest.
 [istanbul]: https://istanbul.js.org
 [jasmine]: https://jasmine.github.io
 
-## What about Typescript?
+## What About Typescript?
 
 While reading through this, you may have been wondering:
 
-> "What about Typescript? Isn't that how people are writing Javascript these
-> days?"
+> What about Typescript? Isn't that how people are writing Javascript these
+> days?
 
 It is true that Typescript has risen massively in popularity over the past few
 years. Indeed, even though I have not been writing any Typescript directly in my
 day-to-day, I get a lot of value out of the typings that libraries provide, both
 those bundled with the libraries and those I add as dependencies from the
-DefinitelyTyped repository. These help my editor give me advanced code
+[DefinitelyTyped] repository. These help my editor give me advanced code
 completion for those libraries and speeds up development.
 
 But at my company, Node.js is still on an adoption/learning curve. We are
@@ -390,18 +394,19 @@ it does not get in the way of developers ability to get their work done.
 Over time I expect that we will write more Typescript. But for now, it's not a
 priority.
 
+[definitelytyped]: https://definitelytyped.org
+
 ## Closing Thoughts for 2021
 
-So that is my list of recommendations for building a Node.js API in 2021. I am
-always keeping an eye on the ecosystem, trying to understand my own pain points
-as well as those of my co-workers. I'm also watching out for new, innovative
-ways that the sorts of applications that we are building can be built. On my
-radar are things like GraphQL, better logging libraries and logging
-infrastructure (like the pino library and Grafana Loki), and distributed tracing
-tooling (the OpenTracing project). I am also constantly learning architectural
-patterns that are in use in our industry, so that I can be familiar enough with
-them to know when they may apply to any given problem that we are attempting to
-solve.
+So that is my list of recommendations for building a Node.js API in 2021. While
+these practices are working well for me now, I'm also paying attention to where
+there are gaps or friction. I'm also watching out for new, innovative ways to
+build the sorts of applications I'm building. On my radar are things like
+[GraphQL], better logging libraries infrastructure (like the [Pino] library and
+[Grafana Loki]), and distributed tracing tooling (the [OpenTracing] project). I
+am also constantly learning architectural patterns that are in use in our
+industry, so that I can be familiar enough with them to know when they may apply
+to any given problem that I'm attempting to solve.
 
 The main improvement to this stack in the last year is the use of Objection. I
 had been keeping an eye on it for a while and only this year decided to give it
@@ -416,3 +421,8 @@ what it provides.
 
 So, go forth and build. And remember: "Best Practices" come and go. Keep your
 eyes open!
+
+[graphql]: https://graphql.org
+[grafana loki]: https://grafana.com/oss/loki/
+[pino]: https://github.com/pinojs/pino
+[opentracing]: https://opentracing.io
