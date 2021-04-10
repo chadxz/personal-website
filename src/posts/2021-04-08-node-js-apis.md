@@ -3,8 +3,8 @@ date: 2021-04-08T17:00:00.00-05:00
 title: My Node.js API Best Practices in 2021
 permalink: 2021-node-api-best-practices/
 tags:
-        - meta
-        - 11ty
+  - node.js
+  - API
 ---
 
 I've been writing Rest APIs in Node.js, Ruby, and PHP for nearly 8 years. Over
