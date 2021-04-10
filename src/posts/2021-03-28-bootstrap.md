@@ -2,9 +2,10 @@
 date: 2021-03-28T02:00:00.00-05:00
 title: Bootstrapping my Static Blog
 permalink: bootstrap/
+tags:
+        - meta
+        - 11ty
 ---
-
-# Bootstrapping my Static Blog
 
 I have had many false-starts with blogging. Most of the time I start out
 tinkering with [various][] [front-end][] [javascript][] [frameworks][], testing

@@ -4,12 +4,14 @@ const pluginRss = require('@11ty/eleventy-plugin-rss');
 const ErrorOverlay = require('eleventy-plugin-error-overlay');
 const markdownIt = require('markdown-it');
 const markdownItAnchor = require('markdown-it-anchor');
-
+const readingTime = require('eleventy-plugin-reading-time');
 const now = Date.now().toString();
 
 module.exports = function (eleventyConfig) {
+  eleventyConfig.setDataDeepMerge(true);
   eleventyConfig.addPlugin(ErrorOverlay);
   eleventyConfig.addPlugin(pluginRss);
+  eleventyConfig.addPlugin(readingTime);
 
   const markdownLib = markdownIt({ html: true, linkify: true }).use(markdownItAnchor);
   eleventyConfig.setLibrary('md', markdownLib);
