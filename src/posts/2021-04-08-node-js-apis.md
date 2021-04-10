@@ -198,12 +198,12 @@ In the Node.js ecosystem, I have been using [node-config] for years and have
 never had any desire to move away from it. It is simple, flexible, and powerful.
 It supports different flat file configuration formats, but I tend to use YAML.
 
-To configuration your application with node-config, you create a `config/`
-directory at the root of your project, then place flat files there that map to
-values of the various environments you may run your application in with the
-`NODE_ENV` variable (for example, `config/production.yml` is used when you run
-your application with `NODE_ENV=production node server.js`). Additionally, you
-can specify a file that maps your configuration values to whatever environment
+To configure your application with node-config, you create a `config/` directory
+at the root of your project, then place flat files there that map to values of
+the various environments you may run your application in with the `NODE_ENV`
+variable (for example, `config/production.yml` is used when you run your
+application with `NODE_ENV=production node server.js`). Additionally, you can
+specify a file that maps your configuration values to whatever environment
 variable name you want. The way it handles defaults and overriding makes
 application configuration simple and painless. Then, in your application code,
 you simply `const config = require('config');` and then
