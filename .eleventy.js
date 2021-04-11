@@ -13,7 +13,11 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addPlugin(pluginRss);
   eleventyConfig.addPlugin(readingTime);
 
-  const markdownLib = markdownIt({ html: true, linkify: true }).use(markdownItAnchor);
+  const markdownLib = markdownIt({ html: true, linkify: true }).use(markdownItAnchor, {
+    permalink: true,
+    permalinkClass: "direct-link",
+    permalinkSymbol: "🔗",
+  });
   eleventyConfig.setLibrary('md', markdownLib);
 
   eleventyConfig.addFilter('formatDate', function (value, spec) {
