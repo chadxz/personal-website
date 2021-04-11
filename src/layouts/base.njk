@@ -15,7 +15,17 @@
     <link rel="author" href="/humans.txt" />
 </head>
 
-<body class="mx-auto px-2 prose lg:prose-xl">
-{{ content | safe }}
+<body>
+    <header class="m-4 max-w-screen-xl xl:mx-auto">
+        <a href="/">
+            <img src="/avatar.png" class="w-14 h-14 rounded-md inline mr-2 shadow-lg" />
+            <span class="font-serif font-normal text-gray-900 text-xl align-middle">Chad McElligott</span>
+        </a>
+        <hr class="mt-4 mb-6" />
+    </header>
+
+    <main class="mx-auto px-2 prose lg:prose-xl">
+        {{ content | safe }}
+    </main>
 </body>
 </html>
