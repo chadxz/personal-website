@@ -1,0 +1,15 @@
+---
+layout: null
+permalink: /sharing-pages.json
+---
+
+{%- set sharable_pages = collections.all | filterSharablePages -%}
+
+[
+{%- for page in sharable_pages %}
+    {
+    "title": "{{ page.data.title }}",
+    "image": "{{ page.fileSlug | toSocialSharingImagePath }}"
+    }{% if loop.index < (sharable_pages | length) %},{% endif %}
+{%- endfor %}
+]

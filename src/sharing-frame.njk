@@ -1,0 +1,42 @@
+---
+layout: null
+permalink: /sharing-frame.html
+---
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Social sharing image generator</title>
+    <link rel="stylesheet" href="/style.css?v={% version %}" type="text/css" media="all" />
+
+    <style>
+        .background {
+            width: 600px;
+            height: 315px;
+            background-size: contain;
+            background-image: url('images/og/default.jpg');
+        }
+    </style>
+</head>
+<body>
+
+<div class="background flex flex-col justify-center items-center text-gray-100 font-sans">
+    <div id="slot" class="text-2xl mb-6 max-w-xs font-medium text-center"></div>
+    <div class="flex items-center">
+        <img src="images/avatar.png" class="rounded-full w-10 h-10 mr-2 shadow" />
+        <span class="italic text-xl text-blue-500">chadxz.dev</span>
+    </div>
+</div>
+
+<script>
+  const queryString = window.location.search
+  const urlParams = new URLSearchParams(queryString)
+  const title = urlParams.get("title") || "Example"
+
+  const slot = document.getElementById("slot")
+
+  slot.innerHTML = title
+</script>
+
+</body>
+</html>

@@ -1,6 +1,8 @@
 ---
 date: 2021-03-28T02:00:00.00-05:00
 title: Bootstrapping my Static Blog
+description: >-
+        Walking through the process of getting my personal blog off the ground.
 permalink: bootstrap/
 tags:
         - meta
