@@ -31,11 +31,10 @@ permalink: /sharing-frame.html
 <script>
   const queryString = window.location.search
   const urlParams = new URLSearchParams(queryString)
-  const title = urlParams.get("title") || "Example"
-
+  const title = urlParams.get("title")
   const slot = document.getElementById("slot")
 
-  slot.innerHTML = title
+  title ? slot.innerHTML = title : slot.remove();
 </script>
 
 </body>
