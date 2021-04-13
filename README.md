@@ -19,7 +19,7 @@ To get started with development:
 
 - install Node.js. On a mac, I recommend `nvm`
 - install the npm packages. `npm install`
-- start the dev server. `npm run serve`
+- start the dev server. `npm start`
 - open your browser to the link printed on the console.
 
 When you are editing the markdown files or the style.css, it will automatically
@@ -36,5 +36,3 @@ New posts are stored in [src/posts](src/posts). Drop a new file there with the
 format `YYYY-MM-DD-slug.md` where `slug` would be a short name for the article.
 See other blog posts for examples of the "front matter" 11ty uses to create
 things like the filename for the generated html page, tags, publish date, etc.
-
-
