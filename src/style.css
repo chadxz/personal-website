@@ -1,6 +1,7 @@
 @import "tailwindcss/base";
 @import "tailwindcss/components";
 @import "tailwindcss/utilities";
+@import "prism-themes/themes/prism-coldark-cold";
 
 .direct-link {
   visibility: hidden;
@@ -8,7 +9,7 @@
   opacity: 45%;
 }
 
-h2:hover .direct-link, h3:hover .direct-link {
+h2:hover .direct-link, h3:hover .direct-link, h4:hover .direct-link {
   visibility: visible;
   text-decoration: none;
 }

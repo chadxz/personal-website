@@ -5,7 +5,6 @@ description: >-
         Sharing a few of the tools and practices that have been key to building
         solid Node.js REST APIs.
 permalink: 2021-node-api-best-practices/
-fileSlug: 2021-node-api-best-practices
 tags:
         - node.js
         - API

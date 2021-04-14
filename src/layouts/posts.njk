@@ -8,8 +8,8 @@ layout: base.njk
             <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 inline-block" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
             </svg>
-            {% set isoDate = date | formatDate("yyyy-MM-dd'T'HH:mm:ss.SSSxxx") %}
-            <time datetime="{{ isoDate }}" title="{{ isoDate }}">{{ date | formatDate('MMMM qo, yyyy') }}</time>
+            {% set isoDate = date | formatDate("yyyy-MM-dd") %}
+            <time datetime="{{ isoDate }}" title="{{ isoDate }}">{{ date | formatDate('MMMM do, yyyy') }}</time>
         </div>
 
         <div class="flex items-center leading-6 space-x-1 mx-3 my-1">
@@ -43,7 +43,7 @@ layout: base.njk
         name="subscribe"
         class="rounded-xl shadow-md p-5 pt-0.5 mb-10 bg-indigo-100"
     >
-        <p>Interested in staying in touch? Enter your email and I will send you a note when I post new content.</p>
+        <p>Interested in staying in touch? <a href="https://twitter.com/chadmcelligott">Follow me on Twitter</a>, or enter your email below and I will send you a note when I post new content.</p>
         <input required type="email" name="email" id="subscribe-email" placeholder="your@email.com" class="placeholder-blueGray-300 text-blueGray-600 px-2 py-2 relative bg-white bg-white rounded border-0 shadow outline-none focus:outline-none focus:ring w-auto" />
         <input type="hidden" value="1" name="embed" />
         <button class="bg-indigo-500 text-white active:bg-indigo-600 px-2 py-2 rounded shadow hover:shadow-md outline-none focus:outline-none ml-1 mb-1 ease-linear transition-all duration-150">Subscribe</button>

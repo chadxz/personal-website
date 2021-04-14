@@ -6,6 +6,7 @@ const ErrorOverlay = require('eleventy-plugin-error-overlay');
 const markdownIt = require('markdown-it');
 const markdownItAnchor = require('markdown-it-anchor');
 const readingTime = require('eleventy-plugin-reading-time');
+const syntaxHighlight = require('@11ty/eleventy-plugin-syntaxhighlight');
 const now = Date.now().toString();
 
 module.exports = function (eleventyConfig) {
@@ -13,11 +14,12 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addPlugin(ErrorOverlay);
   eleventyConfig.addPlugin(pluginRss);
   eleventyConfig.addPlugin(readingTime);
+  eleventyConfig.addPlugin(syntaxHighlight);
 
   const markdownLib = markdownIt({ html: true, linkify: true }).use(markdownItAnchor, {
     permalink: true,
-    permalinkClass: "direct-link",
-    permalinkSymbol: "🔗",
+    permalinkClass: 'direct-link',
+    permalinkSymbol: '🔗',
   });
   eleventyConfig.setLibrary('md', markdownLib);
 
@@ -27,24 +29,23 @@ module.exports = function (eleventyConfig) {
 
   eleventyConfig.addShortcode('version', () => now);
 
-  eleventyConfig.addShortcode("ogImageSource", (slug) => {
-    if(!fs.existsSync(`./src/images/og/${slug}.jpg`)) {
-      slug = "default";
+  eleventyConfig.addShortcode('ogImageSource', (slug) => {
+    if (!fs.existsSync(`./src/images/og/${slug}.jpg`)) {
+      slug = 'default';
     }
     return `https://chadxz.dev/images/og/${slug}.jpg`;
   });
 
-  eleventyConfig.addFilter("filterSharablePages", (pages) => (
-    pages.filter(page => page.data.layout)
-  ));
+  eleventyConfig.addFilter('filterSharablePages', (pages) =>
+    pages.filter((page) => page.data.layout)
+  );
 
-  eleventyConfig.addFilter("toSocialSharingImagePath", (path) => (
-    path || "index"
-  ));
+  eleventyConfig.addFilter('toSocialSharingImagePath', (path) => path || 'index');
 
-  eleventyConfig.addShortcode("getSharingImage", ({ fileSlug }) => (
-    `https://chadxz.dev/images/og/${fileSlug || "index"}.jpg`
-  ));
+  eleventyConfig.addShortcode(
+    'getSharingImage',
+    ({ fileSlug }) => `https://chadxz.dev/images/og/${fileSlug || 'home'}.jpg`
+  );
 
   eleventyConfig.setBrowserSyncConfig({
     ...eleventyConfig.browserSyncConfig,
@@ -59,8 +60,8 @@ module.exports = function (eleventyConfig) {
     .addPassthroughCopy({ 'src/*.jpg': '/' })
     .addPassthroughCopy({ 'src/*.png': '/' })
     .addPassthroughCopy({ 'src/*.ico': '/' })
-    .addPassthroughCopy({ 'src/images/og/*.jpg': '/images/og/' })
-    .addPassthroughCopy({ 'src/images/*': '/images/' });
+    .addPassthroughCopy('src/images/**/*.jpg')
+    .addPassthroughCopy('src/images/**/*.png');
 
   return {
     markdownTemplateEngine: 'njk',
