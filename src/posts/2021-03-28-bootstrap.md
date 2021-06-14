@@ -2,11 +2,11 @@
 date: 2021-03-28T02:00:00.00-05:00
 title: Bootstrapping my Static Blog
 description: >-
-        Walking through the process of getting my personal blog off the ground.
+  Walking through the process of getting my personal blog off the ground.
 permalink: bootstrap/
 tags:
-        - meta
-        - 11ty
+  - meta
+  - 11ty
 ---
 
 I have had many false-starts with blogging. Most of the time I start out
@@ -25,7 +25,7 @@ anything setup for me to write.
 [build tooling]: https://github.com/chadxz/personal-site-rewrite/tree/webpack
 [pinboard]: https://pinboard.in/u:chadxz
 [pocket]:
-        https://getpocket.com/@236ddpUqTVUqXgf7a2Af5a8Af0gaT858f96o78Ubdouf56d254aoDr19z24Ql31f
+  https://getpocket.com/@236ddpUqTVUqXgf7a2Af5a8Af0gaT858f96o78Ubdouf56d254aoDr19z24Ql31f
 [last.fm]: https://www.last.fm/user/chadxz
 
 This time I am determined to take a different approach. While I do want to leave
@@ -197,7 +197,7 @@ for now I'm going with their free tier.
 
 [improvmx]: https://improvmx.com
 [netlify support thread]:
-        https://answers.netlify.com/t/support-guide-how-can-i-receive-emails-on-my-domain/178
+  https://answers.netlify.com/t/support-guide-how-can-i-receive-emails-on-my-domain/178
 
 ## The Foundation has been Laid
 

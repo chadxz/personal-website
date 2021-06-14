@@ -2,10 +2,10 @@
 date: 2021-04-19T17:00:00.00-05:00
 title: Highlights from the April 2021 ThoughtWorks Technology Radar
 description: >-
-        The "blips" on the radar I share or find interesting, and my commentary.
+  The "blips" on the radar I share or find interesting, and my commentary.
 permalink: 2021-april-tech-radar-thoughts/
 tags:
-        - radar
+  - radar
 ---
 
 Twice a year, the consulting agency [ThoughtWorks][tw] publishes a document they
@@ -169,7 +169,7 @@ Fowler wiki article][pc].
 [cdc]: https://martinfowler.com/articles/consumerDrivenContracts.html
 [ea]: https://www.youtube.com/watch?v=CglSFhwbI3s
 [grpc]:
-        https://docs.microsoft.com/en-us/aspnet/core/grpc/versioning?view=aspnetcore-5.0
+  https://docs.microsoft.com/en-us/aspnet/core/grpc/versioning?view=aspnetcore-5.0
 
 ### Other Noteworthy Adoption Recommendations
 
@@ -192,9 +192,9 @@ Fowler wiki article][pc].
 
 [tws]: https://www.thoughtworks.com/radar/tools/sentry
 [bp]:
-        https://chadxz.dev/2021-node-api-best-practices/#report-your-errors-somewhere-you-can-see-them
+  https://chadxz.dev/2021-node-api-best-practices/#report-your-errors-somewhere-you-can-see-them
 [pept]:
-        https://www.thoughtworks.com/radar/techniques/platform-engineering-product-teams
+  https://www.thoughtworks.com/radar/techniques/platform-engineering-product-teams
 
 ## Trial Recommendation Highlights
 
@@ -261,11 +261,11 @@ To learn more about RFCs, I recommend [this article by Gergely Orosz][rfcgo].
 
 [ea]: https://www.thoughtworks.com/radar/techniques/evolutionary-architecture
 [rfc]:
-        https://www.thoughtworks.com/radar/techniques/lightweight-approach-to-rfcs
+  https://www.thoughtworks.com/radar/techniques/lightweight-approach-to-rfcs
 [adr]:
-        https://cognitect.com/blog/2011/11/15/documenting-architecture-decisions.html
+  https://cognitect.com/blog/2011/11/15/documenting-architecture-decisions.html
 [rfcgo]:
-        https://blog.pragmaticengineer.com/scaling-engineering-teams-via-writing-things-down-rfcs/
+  https://blog.pragmaticengineer.com/scaling-engineering-teams-via-writing-things-down-rfcs/
 
 ### Technique Trial - Hypothesis Driven Legacy Renovation
 
@@ -307,7 +307,7 @@ chance to own something important to the team, drive the discussion and perform
 the experiments. Overall, I recommend this approach!
 
 [hdlc]:
-        https://www.thoughtworks.com/radar/techniques/hypothesis-driven-legacy-renovation
+  https://www.thoughtworks.com/radar/techniques/hypothesis-driven-legacy-renovation
 
 ### Other Interesting Trial Blips
 
@@ -385,12 +385,12 @@ actively interested in.
   keep an eye on, for when I get back into React development.
 
 [pfwa]:
-        https://www.thoughtworks.com/radar/techniques/privacy-focused-web-analytics
+  https://www.thoughtworks.com/radar/techniques/privacy-focused-web-analytics
 [bap]: https://www.thoughtworks.com/radar/tools/buildah-and-podman
 [ga]: https://www.thoughtworks.com/radar/tools/github-actions
 [kawk]: https://www.thoughtworks.com/radar/platforms/kafka-api-without-kafka
 [rhf]:
-        https://www.thoughtworks.com/radar/languages-and-frameworks/react-hook-form
+  https://www.thoughtworks.com/radar/languages-and-frameworks/react-hook-form
 [plausible]: https://plausible.io/
 [fathom]: https://usefathom.com
 [na]: https://www.netlify.com/products/analytics/
@@ -437,11 +437,11 @@ So branch out and try a new form of peer review! You might be surprised to find
 that it is a much more rewarding experience than what you are used to.
 
 [prpr]:
-        https://www.thoughtworks.com/radar/techniques/peer-review-equals-pull-request
+  https://www.thoughtworks.com/radar/techniques/peer-review-equals-pull-request
 [pairing]: https://martinfowler.com/articles/on-pair-programming.html
 [mp]: https://mobprogramming.org/mob-programming-basics/
 [rfcgo]:
-        https://blog.pragmaticengineer.com/scaling-engineering-teams-via-writing-things-down-rfcs/
+  https://blog.pragmaticengineer.com/scaling-engineering-teams-via-writing-things-down-rfcs/
 
 ### Hold this Technique - GitOps
 
@@ -473,7 +473,7 @@ model... a good thing!
 [iac]: https://www.thoughtworks.com/radar/techniques/infrastructure-as-code
 [git]: https://www.thoughtworks.com/radar/tools/git
 [llbgf]:
-        https://www.thoughtworks.com/radar/techniques/long-lived-branches-with-gitflow
+  https://www.thoughtworks.com/radar/techniques/long-lived-branches-with-gitflow
 [ansible]: https://www.ansible.com
 
 ### Other Noteworthy Hold Recommendations
@@ -500,10 +500,10 @@ model... a good thing!
   service soon.
 
 [tdpom]:
-        https://www.thoughtworks.com/radar/techniques/ticket-driven-platform-operating-models
+  https://www.thoughtworks.com/radar/techniques/ticket-driven-platform-operating-models
 [acp]: https://www.thoughtworks.com/radar/tools/aws-codepipeline
 [scpo]:
-        https://www.thoughtworks.com/radar/techniques/separate-code-and-pipeline-ownership
+  https://www.thoughtworks.com/radar/techniques/separate-code-and-pipeline-ownership
 
 ## Conclusion
 
