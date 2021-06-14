@@ -2,12 +2,12 @@
 date: 2021-04-08T17:00:00.00-05:00
 title: My Node.js API Best Practices in 2021
 description: >-
-        Sharing a few of the tools and practices that have been key to building
-        solid Node.js REST APIs.
+  Sharing a few of the tools and practices that have been key to building solid
+  Node.js REST APIs.
 permalink: 2021-node-api-best-practices/
 tags:
-        - node.js
-        - API
+  - node.js
+  - API
 ---
 
 I've been writing Rest APIs in Node.js, Ruby, and PHP for nearly 8 years. Over
@@ -101,7 +101,7 @@ book [RESTful Web APIs] by Leonard Richardson & Mike Amundsen.
 
 [resfulapi.net]: https://restfulapi.net
 [wikipedia article]:
-        https://en.wikipedia.org/wiki/Representational_state_transfer
+  https://en.wikipedia.org/wiki/Representational_state_transfer
 [restful web apis]: https://amzn.to/3sUWSrB
 
 ## Use the Express Framework as a Starting Point
@@ -139,7 +139,7 @@ examples I can recommend are [sahat/hackathon-starter][hackathon-starter] and
 [http-server]: https://nodejs.org/api/http.html#http_class_http_server
 [express.js]: https://expressjs.com
 [state-of-js]:
-        https://2020.stateofjs.com/en-US/technologies/back-end-frameworks/
+  https://2020.stateofjs.com/en-US/technologies/back-end-frameworks/
 [openjsf]: https://openjsf.org
 [hackathon-starter]: https://github.com/sahat/hackathon-starter
 [ghost]: https://github.com/TryGhost/Ghost
@@ -184,7 +184,7 @@ There are also myriad tutorials and classes available online.
 [docker]: https://www.docker.com
 [docker-ecs]: https://docs.docker.com/cloud/ecs-integration/
 [compose-aws]:
-        https://aws.amazon.com/blogs/containers/deploy-applications-on-amazon-ecs-using-docker-compose/
+  https://aws.amazon.com/blogs/containers/deploy-applications-on-amazon-ecs-using-docker-compose/
 [ansible]: https://www.ansible.com
 [docker-docs]: https://docs.docker.com/get-started/
 
@@ -252,7 +252,7 @@ Here's hoping more quality OpenAPI tools arrive in the Node.js community.
 [swagger ui]: https://swagger.io/tools/swagger-ui/
 [openapi]: https://www.openapis.org
 [express-openapi]:
-        https://github.com/kogosoftwarellc/open-api/tree/master/packages/express-openapi
+  https://github.com/kogosoftwarellc/open-api/tree/master/packages/express-openapi
 [ref bug]: https://github.com/kogosoftwarellc/open-api/issues/647
 [coerce bug]: https://github.com/kogosoftwarellc/open-api/issues/710
 [swagger ui]: https://swagger.io/tools/swagger-ui/
@@ -334,9 +334,9 @@ keep you from thinking about this stuff any more!
 [standard]: https://standardjs.com/index.html
 [prettier]: https://prettier.io
 [prettier/eslint-config-prettier]:
-        https://github.com/prettier/eslint-config-prettier
+  https://github.com/prettier/eslint-config-prettier
 [prettier/eslint-plugin-prettier]:
-        https://github.com/prettier/eslint-plugin-prettier
+  https://github.com/prettier/eslint-plugin-prettier
 [husky]: https://github.com/typicode/husky
 [lint-staged]: https://github.com/okonet/lint-staged
 
