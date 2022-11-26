@@ -6,7 +6,7 @@ description: >-
   Node.js REST APIs.
 permalink: 2021-node-api-best-practices/
 tags:
-  - node.js
+  - node-js
   - API
 ---
 
