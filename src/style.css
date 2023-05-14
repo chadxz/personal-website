@@ -1,12 +1,10 @@
 @import "tailwindcss/base";
 @import "tailwindcss/components";
 @import "tailwindcss/utilities";
-@import "prism-themes/themes/prism-coldark-cold";
+@import "prism-themes/themes/prism-coldark-cold.css";
 
-.direct-link {
-  visibility: hidden;
-  font-size: 75%;
-  opacity: 45%;
+.header-anchor {
+  text-decoration: none;
 }
 
 h2:hover .direct-link, h3:hover .direct-link, h4:hover .direct-link {

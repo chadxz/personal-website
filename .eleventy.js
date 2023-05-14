@@ -2,26 +2,20 @@
 const fs = require('fs');
 const { format } = require('date-fns');
 const pluginRss = require('@11ty/eleventy-plugin-rss');
-const ErrorOverlay = require('eleventy-plugin-error-overlay');
 const markdownIt = require('markdown-it');
 const markdownItAnchor = require('markdown-it-anchor');
 const readingTime = require('eleventy-plugin-reading-time');
 const syntaxHighlight = require('@11ty/eleventy-plugin-syntaxhighlight');
 const now = Date.now().toString();
-const UpgradeHelper = require("@11ty/eleventy-upgrade-help");
 
 module.exports = function (eleventyConfig) {
-  eleventyConfig.addPlugin(UpgradeHelper);
   eleventyConfig.setDataDeepMerge(true);
-  eleventyConfig.addPlugin(ErrorOverlay);
   eleventyConfig.addPlugin(pluginRss);
   eleventyConfig.addPlugin(readingTime);
   eleventyConfig.addPlugin(syntaxHighlight);
 
   const markdownLib = markdownIt({ html: true, linkify: true }).use(markdownItAnchor, {
-    permalink: true,
-    permalinkClass: 'direct-link',
-    permalinkSymbol: '🔗',
+    permalink: markdownItAnchor.permalink.headerLink({ safariReaderFix: true })
   });
   eleventyConfig.setLibrary('md', markdownLib);
 
@@ -49,13 +43,7 @@ module.exports = function (eleventyConfig) {
     ({ fileSlug }) => `https://chadxz.dev/images/og/${fileSlug || 'home'}.jpg`
   );
 
-  eleventyConfig.setBrowserSyncConfig({
-    ...eleventyConfig.browserSyncConfig,
-    files: ['build/dist/style.css'],
-    ghostMode: false,
-    injectChanges: false,
-    reloadDelay: 500,
-  });
+  eleventyConfig.setServerOptions({ watch: ['build/dist/style.css'] });
 
   eleventyConfig
     .addPassthroughCopy('src/humans.txt')
