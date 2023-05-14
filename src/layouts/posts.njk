@@ -10,7 +10,7 @@ layout: base.njk
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
                 </svg>
                 {% set isoDate = date | formatDate("yyyy-MM-dd") %}
-                <time datetime="{{ isoDate }}" title="{{ isoDate }}">{{ date | formatDate('MMMM do, yyyy') }}</time>
+                <time datetime="{{ isoDate }}">{{ date | formatDate('MMMM do, yyyy') }}</time>
             </div>
 
             <div class="flex items-center leading-6 space-x-1 mx-3 my-1">
