@@ -17,13 +17,11 @@
     <meta property="og:url" content="{{ absolutePageUrl }}" />
     <meta property="og:site_name" content="{{ meta.title }}" />
     <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:site" content="@chadmcelligott" />
     <meta name="twitter:label1" content="Est. reading time" />
     <meta name="twitter:data1" content="{{ content | readingTime({ speed: settings.wpm }) }}" />
     <link rel="alternate" type="application/atom+xml" title="{{ meta.title }}" href="/feed.xml" />
     <link rel="stylesheet" href="/style.css?v={% version %}" type="text/css" media="all" />
     <link rel="me" href="mailto:chad@chadxz.dev" />
-    <link rel="me" href="https://twitter.com/chadmcelligott" />
     <link rel="me" href="https://github.com/chadxz" />
     <link rel="me" href="https://hachyderm.io/@chadxz" />
     <link rel="shortcut icon" href="{{ '/favicon.ico' | absoluteUrl(meta.url) }}?v={% version %}" />

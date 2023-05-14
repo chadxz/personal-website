@@ -3,7 +3,7 @@
 
 # TEAM
 
-    Chad McElligott -- @chadmcelligott
+    Chad McElligott -- @chadxz@hachyderm.io
 
 # TECHNOLOGY COLOPHON
 
