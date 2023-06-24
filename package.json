@@ -29,12 +29,12 @@
     "markdown-it-anchor": "^8.1.0",
     "node-fetch": "^3.1.0",
     "npm-run-all": "^4.1.5",
-    "postcss": "^8.3.5",
+    "postcss": "^8.4.24",
     "postcss-cli": "^10.1.0",
     "postcss-import": "^15.1.0",
     "prettier": "^2.3.2",
     "prism-themes": "^1.7.0",
-    "puppeteer": "^20.2.0",
+    "puppeteer": "^20.7.3",
     "tailwindcss": "^3.0.6"
   },
   "lint-staged": {
@@ -49,6 +49,6 @@
     ]
   },
   "volta": {
-    "node": "18.16.0"
+    "node": "18.16.1"
   }
 }
