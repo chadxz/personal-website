@@ -25,13 +25,6 @@ module.exports = function (eleventyConfig) {
 
   eleventyConfig.addShortcode('version', () => now);
 
-  eleventyConfig.addShortcode('ogImageSource', (slug) => {
-    if (!fs.existsSync(`./src/images/og/${slug}.jpg`)) {
-      slug = 'default';
-    }
-    return `https://chadxz.dev/images/og/${slug}.jpg`;
-  });
-
   eleventyConfig.addFilter('filterSharablePages', (pages) =>
     pages.filter((page) => page.data.layout)
   );
