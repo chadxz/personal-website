@@ -6,7 +6,7 @@ command = "npm run build"
 for = "/*"
 
 [headers.values]
-Content-Security-Policy = "default-src 'self';"
+Content-Security-Policy = "default-src 'self'; frame-src https://www.youtube-nocookie.com;"
 X-Content-Type-Options = "nosniff"
 X-Frame-Options = "deny"
 X-XSS-Protection = "1; mode=block"
