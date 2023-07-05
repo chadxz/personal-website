@@ -11,7 +11,7 @@ eleventyExcludeFromCollections: true
     <link href="{{ meta.url }}" rel="alternate" type="text/html" />
     <updated>{{ collections.posts | getNewestCollectionItemDate | dateToRfc3339 }}</updated>
     <id>{{ meta.url }}</id>
-    <icon>{{ absoluteFeedUrl }}/apple-touch-icon.png</icon>
+    <icon>{{ meta.url }}/apple-touch-icon.png</icon>
     <author>
         <name>{{ meta.author.name }}</name>
         <email>{{ meta.author.email }}</email>
