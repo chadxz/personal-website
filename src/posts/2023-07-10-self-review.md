@@ -15,10 +15,10 @@ One of the key traits of a senior engineer and especially a staff+ engineer is
 being _self-directing_. A trick I have used for years to do my best work and
 reduce the burden on my coworkers is to review my own work.
 
-Reviewing your own work means to take off your "author" hat and put on your
+Reviewing your own work means taking off your "author" hat and putting on your
 "reviewer" hat, inspecting it from a detached perspective and evaluating its
 merits, style, and other qualities as if you were reviewing the same from
-someone else. You want to do this prior to sharing your work with others, so
+someone else. You want to do this prior to sharing your work with others so
 that they don't also have to muddle through all the mistakes you will find on
 your own in your self-review. You will also want to hold yourself to a higher
 standard than you would hold others to, to grow yourself and set a good example
@@ -36,7 +36,7 @@ to do the same. It's super easy to work on a branch for days or even weeks
 before opening a merge request, but a lot more difficult for someone to come
 along and provide a meaningful review of that work. If you review this work
 yourself prior, it will naturally encourage you to build merge requests that are
-great to review - smaller, well scoped, well explained and relevant.
+great to review - smaller, well-scoped, well-explained, and relevant.
 
 Performing a code review of your own work will naturally force you to ask
 yourself: "What are the important pieces of this request that should be
@@ -45,7 +45,7 @@ have when you review others' code. By deliberately disconnecting yourself from
 your own code when you self-review, you combat your bias to cut corners or do
 work that you would frown upon if done by others. The result here is that you
 not only deliver more rigorous work, but you also begin to acknowledge where
-your judgement of others' work may be nitpicking or otherwise not helpful, and
+your judgment of others' work may be nitpicking or otherwise not helpful and
 can cut it out!
 
 There are tons of good practices you should be looking for when you review code,
@@ -79,7 +79,7 @@ criteria, but it should encompass at least what your organization considers the
 proposal that you have the autonomy to implement, but want to gather thoughts
 and ideas from others to round out your own. Before you share an RFC widely, put
 on your reviewer cap and evaluate it critically. You're about to ask many people
-to build a mental model of our proposal and provide helpful feedback, which is
+to build a mental model of your proposal and provide helpful feedback, which is
 hard work! To help them out, you can make sure your document succinctly captures
 your idea and how it solves a specific, well-understood problem.
 
@@ -97,7 +97,7 @@ want to ask yourself when self-reviewing are:
   not, how can I expand the proposal to elaborate on this wider impact?
 - Is there any way to make this shorter? Am I being redundant anywhere that
   could be trimmed?
-- Is there enough detail to my proposal to allow reviewers to evaluate it fully?
+- Is there enough detail in my proposal to allow reviewers to evaluate it fully?
   If not, is there some way to make it explicit what kind of feedback I am
   looking for given the amount of detail?
 - Am I being biased in my description of the alternatives? Are the true merits
@@ -116,7 +116,7 @@ Reviewing your own work is an important part of respecting others' time and
 making sure you are getting the most out of the time they do dedicate to helping
 you. It also helps you to be more thoughtful about the value you are creating
 within your organization which results in better results for everyone. Before
-asking for someone else to review your work, put the effort in to you review it
+asking for someone else to review your work, put the effort in to review it
 yourself - you won't regret it.
 
 [rfc]: http://philcalcado.com/2018/11/19/a_structured_rfc_process.html
