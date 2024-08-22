@@ -12,11 +12,11 @@ tags:
 I have had many false-starts with blogging. Most of the time I start out
 tinkering with [various][] [front-end][] [javascript][] [frameworks][], testing
 [build tooling][], and trying to come up with fancy ideas prior to bootstrapping
-the blogging pieces. As time went on I would tell myself I would eventually get
-around to building the blogging portions of the site, but when push came to
-shove it never became a priority. So my site would sit around with integrations
-setup to tools I use (i.e. [Pinboard][], [Pocket][], [Last.fm][]), but without
-anything setup for me to write.
+the blogging pieces. As time went on I would tell myself I would eventually get around
+to building the blogging portions of the site, but when push came to shove it never
+became a priority. So my site would sit around with integrations setup to tools I
+use (i.e. [Pinboard][], [Pocket][], [Last.fm][]), but without anything setup for
+me to write.
 
 [various]: https://github.com/chadxz/chadmcelligott.com
 [front-end]: https://github.com/chadxz/personal-site-rewrite
@@ -41,11 +41,11 @@ In this post, I want to share my initial setup with you.
 I had already decided that I wanted to self-host and use a workflow driven by
 flat files and static-site generation. I really like the git-based flat files
 because they are simple, portable, and _mine_. I'm also really comfortable
-working in Markdown and have tools (like [IntelliJ editors][] and
-[Marked.app][]) that have strong support for Markdown. I knew there were good
-free options for hosting static sites and that more have emerged in recent
-times, so building this way would be a low-overhead way to start blogging. The
-only decision left was to choose which SSG to use.
+working in Markdown and have tools (like [IntelliJ editors][] and [Marked.app][])
+that have strong support for Markdown. I knew there were good free options for hosting
+static sites and that more have emerged in recent times, so building this way would
+be a low-overhead way to start blogging. The only decision left was to choose which
+SSG to use.
 
 [intellij editors]: https://www.jetbrains.com/help/idea/markdown.html
 [marked.app]: https://marked2app.com
@@ -90,11 +90,11 @@ deciding where to deploy it.
 
 ## Deploying My Site to Netlify
 
-I have always been a fan of platforms like [Heroku][] and [Github Pages][] that
-take so much of the toil away from deploying applications. I have deployed web
-applications to both, and have been very happy with them. BUT! You'd have to be
-living under a rock to not see all the buzz about [Netlify][] these days, so I
-wanted to give it a try to see for myself.
+I have always been a fan of platforms like [Heroku][] and [Github Pages][] that take
+so much of the toil away from deploying applications. I have deployed web applications
+to both, and have been very happy with them. BUT! You'd have to be living under a
+rock to not see all the buzz about [Netlify][] these days, so I wanted to give it
+a try to see for myself.
 
 [heroku]: https://www.heroku.com
 [github pages]: https://pages.github.com
@@ -106,8 +106,8 @@ with Netlify took seconds. Walking through their on-boarding process is quick
 and before I knew it my application was fully available at a random netlify url.
 I could hardly believe how easy it was.
 
-Netlify also offers [server-side analytics][] for $9/month, which I thought was
-a good deal. Yes, [Google Analytics][] is free, but I wanted something that was
+Netlify also offers [server-side analytics][] for $9/month, which I thought was a
+good deal. Yes, [Google Analytics][] is free, but I wanted something that was
 more privacy conscious. My runner-up was [Fathom][], but it was more expensive,
 and I _really_ liked that server-side analytics don't require client-side
 scripts to be effective.
@@ -137,11 +137,10 @@ a good fit.
 [namecheap]: https://www.namecheap.com
 [my github username]: https://github.com/chadxz
 
-After purchasing my domain, I moved the DNS over to [Netlify DNS][] service.
-Using the Netlify DNS is free and is configurable if you want to set up
-additional records besides the ones necessary to host your site. As a bonus,
-once your custom domain is configured, Netlify automatically provisions a [SSL
-certificate][] for free.
+After purchasing my domain, I moved the DNS over to [Netlify DNS][] service. Using
+the Netlify DNS is free and is configurable if you want to set up additional records
+besides the ones necessary to host your site. As a bonus, once your custom domain
+is configured, Netlify automatically provisions a [SSL certificate][] for free.
 
 [netlify dns]: https://docs.netlify.com/domains-https/netlify-dns/
 [ssl certificate]: https://docs.netlify.com/domains-https/https-ssl/
@@ -159,22 +158,21 @@ front, I decided on two pieces to tackle this:
 1. Ensure the blog has an RSS/Atom feed setup
 2. Make it painless to receive new content via email
 
-The RSS/Atom feed was super easy - 11ty has a [1st-class plugin][] for
-generating Atom feeds, and the walk-through on their site shows how to build a
-basic template for one.
+The RSS/Atom feed was super easy - 11ty has a [1st-class plugin][] for generating
+Atom feeds, and the walk-through on their site shows how to build a basic template
+for one.
 
 [1st-class plugin]: https://www.11ty.dev/docs/plugins/rss/
 
 Adding the ability to subscribe to my blog content via email was more work and
 required vendor selection. I knew I wanted to find something free and easy,
 because I was only getting started and knew my needs would not be complex. As it
-turns out, earlier in the day I had subscribed to [Cassidy Williams][]'
-newsletter "[rendezvous with cassidoo]", which uses [buttondown.email][]. Taking
-a look at their site, they do everything I wanted and have a generous free tier
-(up to 1,000 subscribers for free), so I decided to roll with them. My
-newsletter is now available at [https://buttondown.email/chadxz][], and I'll be
-adding a small unobtrusive signup form to the bottom of my post template in the
-future.
+turns out, earlier in the day I had subscribed to [Cassidy Williams][]' newsletter
+"[rendezvous with cassidoo]", which uses [buttondown.email][]. Taking a look at their
+site, they do everything I wanted and have a generous free tier (up to 1,000 subscribers
+for free), so I decided to roll with them. My newsletter is now available at [https://buttondown.email/chadxz][],
+and I'll be adding a small unobtrusive signup form to the bottom of my post template
+in the future.
 
 Now while setting up my newsletter, I realized I wanted it to be sent _by me_
 and _from my new domain_. In order to make this work, I would need some way to
@@ -188,12 +186,12 @@ receive email at my domain.
 ## Receiving Email at My Custom Domain With ImprovMX
 
 While doing some research into whether Netlify DNS supported sending and
-receiving email, I ran across an official recommendation on a [Netlify support
-thread] for using the service [ImprovMX][]. ImprovMX has a dead-simple setup and
-allows setting up to 5 email addresses (including a wildcard) to forward emails
-sent to your custom domain to the email address of your choice. For free. If you
-want to send emails _from_ your custom domain, you have to cough up some $$, but
-for now I'm going with their free tier.
+receiving email, I ran across an official recommendation on a [Netlify
+support thread] for using the service [ImprovMX][]. ImprovMX has a dead-simple
+setup and allows setting up to 5 email addresses (including a wildcard) to
+forward emails sent to your custom domain to the email address of your choice.
+For free. If you want to send emails _from_ your custom domain, you have to
+cough up some $$, but for now I'm going with their free tier.
 
 [improvmx]: https://improvmx.com
 [netlify support thread]:

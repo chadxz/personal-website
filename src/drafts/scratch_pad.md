@@ -55,12 +55,11 @@ would be suitable, and preferable, to use.
 
 [Redwood] is a much different beast. It aims to build on the "[JAMStack]"
 concept by providing a backend deployable on FaaS providers like [Netlify
-Functions]. It is also opinionated about using GraphQL on the backend and React
-on the frontend. It wraps this entire Developer experience up in a nice package
-that is meant to feel as productive as working in a framework like Ruby on
-Rails. This framework is in its infancy, but I think it shows potential, so I'm
-watching it and intend to try it out to explore the viability of building with
-it in the future.
+Functions]. It is also opinionated about using GraphQL on the backend and React on
+the frontend. It wraps this entire Developer experience up in a nice package that
+is meant to feel as productive as working in a framework like Ruby on Rails. This
+framework is in its infancy, but I think it shows potential, so I'm watching it and
+intend to try it out to explore the viability of building with it in the future.
 
 [fastify]: https://www.fastify.io
 [redwood]: https://redwoodjs.com

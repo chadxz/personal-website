@@ -18,9 +18,9 @@ reduce the burden on my coworkers is to review my own work.
 Reviewing your own work means taking off your "author" hat and putting on your
 "reviewer" hat, inspecting it from a detached perspective and evaluating its
 merits, style, and other qualities as if you were reviewing the same from
-someone else. You want to do this prior to sharing your work with others so
-that they don't also have to muddle through all the mistakes you will find on
-your own in your self-review. You will also want to hold yourself to a higher
+someone else. You want to do this prior to sharing your work with others so that
+they don't also have to muddle through all the mistakes you will find on your
+own in your self-review. You will also want to hold yourself to a higher
 standard than you would hold others to, to grow yourself and set a good example
 for others.
 
@@ -45,8 +45,8 @@ have when you review others' code. By deliberately disconnecting yourself from
 your own code when you self-review, you combat your bias to cut corners or do
 work that you would frown upon if done by others. The result here is that you
 not only deliver more rigorous work, but you also begin to acknowledge where
-your judgment of others' work may be nitpicking or otherwise not helpful and
-can cut it out!
+your judgment of others' work may be nitpicking or otherwise not helpful and can
+cut it out!
 
 There are tons of good practices you should be looking for when you review code,
 but when you are reviewing your own code especially, you may ask yourself

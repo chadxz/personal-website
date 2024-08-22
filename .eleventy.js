@@ -15,7 +15,7 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addPlugin(syntaxHighlight);
 
   const markdownLib = markdownIt({ html: true, linkify: true }).use(markdownItAnchor, {
-    permalink: markdownItAnchor.permalink.headerLink({ safariReaderFix: true })
+    permalink: markdownItAnchor.permalink.headerLink({ safariReaderFix: true }),
   });
   eleventyConfig.setLibrary('md', markdownLib);
 

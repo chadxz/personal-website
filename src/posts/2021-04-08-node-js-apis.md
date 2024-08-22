@@ -96,8 +96,8 @@ Understanding these things will help you make good decisions when building web
 APIs and know when certain patterns deviate from the norm.
 
 Some resources I used to learn the fundamentals of RESTful web API design are
-the corresponding [Wikipedia article], the [resfulapi.net] tutorial, and the
-book [RESTful Web APIs] by Leonard Richardson & Mike Amundsen.
+the corresponding [Wikipedia article], the [resfulapi.net] tutorial, and the book
+[RESTful Web APIs] by Leonard Richardson & Mike Amundsen.
 
 [resfulapi.net]: https://restfulapi.net
 [wikipedia article]:
@@ -226,8 +226,8 @@ API Documentation is difficult to keep up-to-date, but is nevertheless important
 for any non-trivial application. [Swagger], or more precisely [OpenAPI
 3][openapi], is a format for specifying the API contract of a web API. When I
 use it, I define my API endpoints, authentication, inputs and outputs in a YAML
-file. This file can then be shared with my API consumers using [Swagger UI] to
-provide rich documentation and _an interactive UI_ for trying out the API!
+file. This file can then be shared with my API consumers using [Swagger UI] to provide
+rich documentation and _an interactive UI_ for trying out the API!
 
 To ensure that this specification stays in sync with the actual application
 endpoints, I use the [express-openapi] library to build the main Express API
@@ -407,10 +407,10 @@ these practices are working well for me now, I'm also paying attention to where
 there are gaps or friction. I'm also watching out for new, innovative ways to
 build the sorts of applications I'm building. On my radar are things like
 [GraphQL], better logging libraries infrastructure (like the [Pino] library and
-[Grafana Loki]), and distributed tracing tooling (the [OpenTracing] project). I
-am also constantly learning architectural patterns that are in use in our
-industry, so that I can be familiar enough with them to know when they may apply
-to any given problem that I'm attempting to solve.
+[Grafana Loki]), and distributed tracing tooling (the [OpenTracing] project). I am
+also constantly learning architectural patterns that are in use in our industry,
+so that I can be familiar enough with them to know when they may apply to any given
+problem that I'm attempting to solve.
 
 The main improvement to this stack in the last year is the use of Objection. I
 had been keeping an eye on it for a while and only this year decided to give it
