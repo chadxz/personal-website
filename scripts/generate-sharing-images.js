@@ -1,5 +1,4 @@
 const puppeteer = require('puppeteer');
-const fetch = require('node-fetch');
 
 const PAGES_JSON = 'http://localhost:8080/sharing-pages.json';
 const FRAME_URL = 'http://localhost:8080/sharing-frame.html?title=';
