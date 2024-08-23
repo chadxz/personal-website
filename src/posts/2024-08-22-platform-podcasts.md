@@ -22,7 +22,7 @@ thoughts you want to share, happy to chat.
 ## Level Up Podcast - How product engineering made Chad McElligott a better platform leader
 
 <iframe
-    class="w-full aspect-video"
+    class="w-full aspect-video rounded-xl shadow-md"
     src="https://www.youtube-nocookie.com/embed/Jc6DvcNKajU"
     title="YouTube video player"
     frameborder="0"
@@ -32,14 +32,10 @@ thoughts you want to share, happy to chat.
 
 ## Day Two DevOps - Platforms Reduce Cognitive Overhead
 
-<div class="flex justify-center w-full">
-<iframe
-    src="https://embed.podcasts.apple.com/us/podcast/platforms-reduce-cognitive-overhead/id1460004936?i=1000639816390"
-    allow="autoplay *; encrypted-media *; fullscreen *; clipboard-write"
-    frameborder="0"
-    height="175"
-    sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-storage-access-by-user-activation allow-top-navigation-by-user-activation"
-    class="w-full max-w-[660px] overflow-hidden rounded-lg">
-</iframe>
+<div class="relative w-full pt-[42.8571%]">
+    <iframe src="https://pca.st/embed/8sw0m5dc"
+        class="absolute inset-0 w-full h-full border-0 rounded-xl shadow-md"
+        allowfullscreen>
+    </iframe>
 </div>
 &nbsp;
