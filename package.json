@@ -48,8 +48,5 @@
     "*.yml": [
       "prettier --write"
     ]
-  },
-  "volta": {
-    "node": "18.16.1"
   }
 }

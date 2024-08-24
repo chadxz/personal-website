@@ -17,7 +17,7 @@ For more details, see the [blog post](https://chadxz.dev/bootstrap/).
 
 To get started with development:
 
-- install Node.js. I recommend using [volta](https://volta.sh)
+- install Node.js. I recommend using [proto](https://moonrepo.dev/proto)
 - install the npm packages. `npm install`
 - start the dev server. `npm start`
 - open your browser to the link printed on the console.
