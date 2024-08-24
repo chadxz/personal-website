@@ -177,9 +177,9 @@ it out the next time I need a diagram.
 
 DevOpsDays is a not-for-profit organization that is run by volunteers and is
 solely focused on bringing technologists together. Supporting your local
-DevOpsDays helps build your local tech. This in turn encourages innovation that
-you can take part in as an employee or co-founder, creates a community you can
-source solid candidates from as colleagues or learn from, and provides you
+DevOpsDays helps build your local tech scene. This in turn encourages innovation
+that you can take part in as an employee or co-founder, creates a community you
+can source solid candidates from as colleagues or learn from, and provides you
 opportunities to grow yourself by teaching, speaking and mentoring others. I
 strongly recommend DevOpsDays and am thankful for the organizing committee of
 DevOpsDays Birmingham. 👏
