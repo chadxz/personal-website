@@ -167,7 +167,7 @@ subscription-based solutions for the PostgreSQL user community.
 Lastly, I had a fun (but nerdy) conversation about architecture diagramming in
 an open spaces conversation. I shared some tools I had been using lately for
 sharing knowledge with others ([eraser.io](https://eraser.io/) and
-[gamma.ai](https://gamma.app/)) and the pains I have had with
+[gamma.app](https://gamma.app/)) and the pains I have had with
 [excalidraw](https://excalidraw.com/), and was recommended to give
 [Miro](https://miro.com/) another try for architecture diagrams. I've been using
 Miro for other things but not for architecture, so I'm looking forward to trying
