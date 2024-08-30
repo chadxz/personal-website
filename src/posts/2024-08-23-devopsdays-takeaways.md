@@ -63,7 +63,7 @@ between your cloud provider that gives you a single place to manage access
 control, rotation policies, and more. For me at a startup that is only working
 in Google Cloud, I think it is best for us to stick to Google Cloud Secrets
 Manager and, when providing access to Kubernetes workloads, some sort of
-operator for briding between the Kubernetes world of workload identity (i.e.
+operator for bridging between the Kubernetes world of workload identity (i.e.
 service accounts and namespaces) and the secret, such as
 [External Secrets Operator](https://external-secrets.io/latest/).
 
