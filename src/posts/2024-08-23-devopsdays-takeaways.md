@@ -182,4 +182,4 @@ that you can take part in as an employee or co-founder, creates a community you
 can source solid candidates from as colleagues or learn from, and provides you
 opportunities to grow yourself by teaching, speaking and mentoring others. I
 strongly recommend DevOpsDays and am thankful for the organizing committee of
-DevOpsDays Birmingham. 👏
+DevOpsDays Birmingham, their sponsors, and my employer [Smartrr](https://smartrr.com) for sending me. 👏
