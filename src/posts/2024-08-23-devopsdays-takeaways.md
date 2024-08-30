@@ -152,7 +152,7 @@ how their product progresses!
 
 <img src="/images/dod-recap-2024/crystaldb.png" alt="CrystalDB" class="float-right ml-4 mb-2 w-1/4">
 
-Another was with [Johann Schleier-Smith](https://www.linkedin.com/in/jssmith/)
+Another conversation was with [Johann Schleier-Smith](https://www.linkedin.com/in/jssmith/)
 about the work he is doing to provide automated ops for PostgreSQL with the
 startup he has founded called [CrystalDB](https://www.crystaldb.cloud/). I
 shared the pains Smartrr has been having with performance and how having some
