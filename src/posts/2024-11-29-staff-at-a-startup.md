@@ -84,6 +84,9 @@ trust.
   src="../images/startup/Modern%20Staff%20Engineering%20at%20a%20Startup%20for%20Blog-4.png"
 />
 
+But what do these concepts of DevOps, Staff Engineering, and Platform
+Engineering mean?
+
 ### DevOps
 
 <img
