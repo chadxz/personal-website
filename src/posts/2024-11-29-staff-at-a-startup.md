@@ -864,3 +864,7 @@ at a startup for the first time, I think you'll find you have a lot to bring to
 the table.
 
 Thank you 🙏.
+
+_Many thanks to Chris Hodges, Kyle Kurz, James Turnbull, David Lee, Patrick
+Steadman, and Samuel Galarneau for reviewing and providing feedback on the early
+drafts of this talk._
