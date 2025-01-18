@@ -1,7 +1,7 @@
 {
   "name": "personal-website",
   "version": "1.0.0",
-  "main": "index.js",
+  "type": "module",
   "private": true,
   "scripts": {
     "build": "npm-run-all build:html build:css",
@@ -13,7 +13,7 @@
     "format": "prettier --write \"**/*.{md,html,json,yml,js}\"",
     "prepare": "husky",
     "clean": "rimraf build",
-    "sharing-images": "node scripts/generate-sharing-images.js",
+    "sharing-images": "node scripts/generate-sharing-images.mjs",
     "update-deps": "npm-check -u"
   },
   "author": "Chad McElligott <chad@chadxz.dev>",

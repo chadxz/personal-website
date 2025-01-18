@@ -1,15 +1,14 @@
 'use strict';
-const fs = require('fs');
-const { format } = require('date-fns');
-const pluginRss = require('@11ty/eleventy-plugin-rss');
-const markdownIt = require('markdown-it');
-const markdownItAnchor = require('markdown-it-anchor');
-const readingTime = require('eleventy-plugin-reading-time');
-const syntaxHighlight = require('@11ty/eleventy-plugin-syntaxhighlight');
+import { format } from 'date-fns';
+import pluginRss from '@11ty/eleventy-plugin-rss';
+import markdownIt from 'markdown-it';
+import markdownItAnchor from 'markdown-it-anchor';
+import readingTime from 'eleventy-plugin-reading-time';
+import syntaxHighlight from '@11ty/eleventy-plugin-syntaxhighlight';
 
 const now = Date.now().toString();
 
-module.exports = function (eleventyConfig) {
+export default async function (eleventyConfig) {
   eleventyConfig.setDataDeepMerge(true);
   eleventyConfig.addPlugin(pluginRss);
   eleventyConfig.addPlugin(readingTime);

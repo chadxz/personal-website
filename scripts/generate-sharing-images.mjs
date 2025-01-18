@@ -1,5 +1,5 @@
-const { existsSync } = require('fs');
-const puppeteer = require('puppeteer');
+import { existsSync } from 'fs';
+import puppeteer from 'puppeteer';
 
 const PAGES_JSON = 'http://localhost:8080/sharing-pages.json';
 const FRAME_URL = 'http://localhost:8080/sharing-frame.html?title=';
