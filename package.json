@@ -23,7 +23,7 @@
     "@11ty/eleventy-plugin-syntaxhighlight": "^5.0.0",
     "@tailwindcss/typography": "^0.5.16",
     "autoprefixer": "^10.4.20",
-    "date-fns": "^3.6.0",
+    "date-fns": "^4.1.0",
     "eleventy-plugin-reading-time": "0.0.1",
     "husky": "^9.1.7",
     "lint-staged": "^15.4.1",
