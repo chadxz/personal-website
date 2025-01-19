@@ -9,8 +9,7 @@ layout: base.njk
                 <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 inline-block" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
                 </svg>
-                {% set isoDate = date | formatDate("yyyy-MM-dd") %}
-                <time datetime="{{ isoDate }}">{{ date | formatDate('MMMM do, yyyy') }}</time>
+                <time datetime="{{ date | dateToRfc3339 }}">{{ date | formatDate('MMMM do, yyyy') }}</time>
             </div>
 
             <div class="flex items-center leading-6 space-x-1 mx-3 my-1">
@@ -44,7 +43,7 @@ layout: base.njk
             name="subscribe"
             class="rounded-xl shadow-md p-5 pt-0.5 mb-10 bg-indigo-100"
         >
-            <p>Interested in staying in touch? <a href="https://www.linkedin.com/in/chadmcelligott/" title="Connect with me on LinkedIn">Connect with me on LinkedIn</a>, or enter your email below and I will send you a note when I post new content.</p>
+            <p>Interested in staying in touch? <a href="https://www.linkedin.com/in/chadmcelligott/" title="Connect with me on LinkedIn">Connect with me on LinkedIn</a>, <a href='https://bsky.app/profile/chadxz.dev' title='Follow me on Bluesky'>Follow me on Bluesky</a>, or enter your email below and I will send you a note when I post new content.</p>
             <div class="flex w-full">
                 <input required type="email" name="email" id="subscribe-email" placeholder="your@email.com" class="placeholder-slate-300 text-slate-600 px-2 py-2 relative bg-white rounded-l border-0 shadow outline-none focus:outline-none focus:ring flex-grow" />
                 <input type="hidden" value="1" name="embed" />
