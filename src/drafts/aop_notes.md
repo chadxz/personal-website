@@ -446,7 +446,6 @@ from generate_series(1, 3) as t(x);
 
 > - `Inner join`s are useful when you want to only keep rows that satisfy the
 >   join condition for both involved relation.
->
 > - `Outer join`s are useful when you want to keep a reference relation's
 >   dataset no matter what and enrich it with the dataset from the other
 >   relation when the join condition is satisfied. The relation of which you
@@ -456,10 +455,8 @@ from generate_series(1, 3) as t(x);
 >   you keep some known data and must fill in the result relation with data that
 >   doesn't exist, so that's when `null` is very useful, and also why `null` is
 >   a member of every SQL data type (including the Boolean data type),
->
 > - `Full outer join`s is a special case of an outer join where you want to keep
 >   all the rows in the dataset, whether they satisfy the join condition or not.
->
 > - `Lateral join`s introduce the capability for the join condition to be
 >   _pushed down_ into the relation on the right, allowing for new semantics
 >   such as top-N queries, thanks to being able to use `limit` in a lateral
@@ -989,20 +986,16 @@ create table tweet
 >   separate com-mands. This also means that there is no way to create a primary
 >   key, unique constraint, or exclusion constraint spanning all partitions; it
 >   is only possible to constrain each leaf partition individually.
->
 > - Since primary keys are not supported on partitioned tables, foreign keys
 >   referencing partitioned tables are not supported, nor are foreign key
 >   references from a partitioned table to some other table.
->
 > - Using the `on conflict` clause with partitioned tables will cause an error,
 >   because unique or exclusion constraints can only be created on individual
 >   par-titions. There is no support for enforcing uniqueness (or an exclusion
 >   con-straint) across an entire partitioning hierarchy.
->
 > - An `update` that causes a row to move from one partition to another fails,
 >   because the new value of the row fails to satisfy the implicit partition
 >   constraint of the original partition.
->
 > - Row triggers, if necessary, must be defined on individual partitions, not
 >   the partitioned table.
 >
@@ -1233,7 +1226,7 @@ https://research.google.com/pubs/pub40671.html
 
 https://github.com/citusdata/postgresql-hll
 
-There are a few pieces to this query that I find interesting, but over my head:
+There are a few pieces to this query that I find interesting:
 
 - `skip locked` to omit a row from the current transaction without any locking
   or waiting

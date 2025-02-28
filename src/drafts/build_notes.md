@@ -1,5 +1,7 @@
 # My Raw Annotations and Notes from "Build: Elements of an Effective Software Organization" by Rebecca Murphey & Otto Hilska
 
+128 pages. A good, short read. A primer on developer experience. Recommended.
+
 ## 1 - Introduction
 
 ### Measurement and Goal Setting
@@ -188,3 +190,170 @@ and KTLO.
 
 > Promote and cultivate a growth mindset, encouraging teams to revisit and
 > revise plans as new information becomes available.
+
+## 3 - Developer Productivity
+
+The problem is often **process bottlenecks**.
+
+### Productivity table stakes
+
+> (1) Limited queue depth (backlog)
+>
+> (2) Small batch sizes
+>
+> (3) Limited work-in-progress (WIP)
+
+> [...] ensure that valuable and time-sensitive tasks are getting addressed
+> promptly
+
+### Productivity vs. quality
+
+> Fascinatingly [...] if you're doing productivity right, quality will tend to
+> increase over time, as it becomes easier to ship smaller changes and easier to
+> roll back or disable features.
+
+> **Make it easy to write tests**. [...] Educate your engineers on how to use
+> testing tools, making setup easy.
+
+> **Make it easy to get the right data**. Tests shouldn't be talking to
+> production to get data, but they need data that's a realistic simulation of
+> the kind you'd see in production.
+
+> **Make it easy to manually test**. [...] Make it easy to interact with code
+> that's on a feature branch.
+
+> **Make it easy to release (and roll back) small changes**. One of the reasons
+> teams get in a position of doing a ton of pre-release manual testing is that
+> the release process itself is so onerous - and the rollback process is worse.
+
+> Add a ratchet to CI to make sure test coverage of your code only goes up, and
+> incentivize writing tests and sharing strategies within and across teams.
+
+### Frameworks for thinking about productivity
+
+> The aim isn't to become obsessed with numbers but to continually evaluate
+> whether you're satisfied with what the numbers are telling you.
+
+### Deployment frequency
+
+> For a mobile app with an extensive QA process, getting to a two-week release
+> cadence is already a good target, while the best teams building web backends
+> deploy to production whenever a change is ready.
+
+> If the build passes, can we feel good about deploying to production? If not,
+> you'll likely want to start building tests from the top of the pyramid [...]
+
+> If the build fails [...] you need to understand which tests are causing most
+> of your headaches
+
+### Setting goals around productivity
+
+> In many ways, the core DORA metrics cover the activity pillar in SPACE, and
+> establishing them within your organization will quickly highlight potential
+> opportunities.
+
+> SPACE is great as a framework to classify problems and brainstorm specific
+> metrics you might use to track trends and validate improvements.
+
+### Tools and Tactics
+
+> Before you do anything else with developer productivity, ensure there's
+> general agreement on reducing interruptions
+
+## 4 - developer experience
+
+### measuring developer experience
+
+> developer experience metrics are more qualitative [...] it's table stakes to
+> capture employee satisfaction and engagement data.
+
+### identifying improvements
+
+> **the people whose productivity you are trying to improve are the best source
+> of information about what needs improving.** you can better understand their
+> needs by approaching this on two fronts: talking to the users of your internal
+> development systems and collecting data about tool behavior as engineers go
+> about their day.
+
+> talk to your users
+
+> many or even most of the ideas you'll come across will have technical
+> solutions, but don't tune out people, processes, and political challenges that
+> merit different approaches. Increasing engineering leverage without spending
+> engineering time could be a huge win.
+
+### collect empirical data
+
+> [...] it's essential to have quantitative data to help guide your
+> prioritization and validate the qualitative stories you hear.
+
+> It's relatively easy to build observability into your internal tooling.
+
+> An internal tool should be able to record every invocation and its outcome,
+> along with various metadata about the interaction. Most importantly, it should
+> record **how long a developer has waited to get output from the tool**.
+
+### Internal support
+
+> When knowledge becomes the domain of a select few and isn't disseminated
+> broadly, it creates an environment where constant queries become the norm.
+
+> You can solve [knowledge siloing] through knowledge-sharing sessions, and
+> partnering on tasks unfamiliar to other team members.
+
+### External support
+
+> Continually analyze your support workload to find things you could proactively
+> address.
+
+### Are you interruption-aware?
+
+> The goal isn't to eliminate them entirely but rather to measure, reduce, and
+> manage them in a way that aligns with the team's needs and the organization's
+> objectives.
+
+### Setting experience goals
+
+> Accept satisfaction surveys [...] as a lagging indicator as you [work to]
+> improve [the sources of interruptions].
+
+## 5 - putting it all together
+
+### Convenient fallacies to avoid
+
+> **"We aren't doing enough up-front requirement-gathering"** [...] Adhering too
+> rigidly to initial specifications leads to inefficiency and stifles innovative
+> solutions.
+
+> **"What we really need is more people"** [...] Effective productivity stems
+> from ruthless prioritization and managing and optimizing the workload and
+> capabilities of the existing team, not indiscriminately increasing team size.
+
+> **"We just need to plan better"** [...] Effective planning requires balance -
+> it provides direction, but not so much that it impedes flexibility and rapid
+> response to change.
+
+### Keep effectiveness top of mind
+
+> Encourage your team to experiment with new methods, tools, and processes.
+
+### Know when to move on
+
+> [Once a bottleneck is addressed and resolved] it's time to move from actively
+> working on [it] toward monitoring it to ensure there's no backsliding.
+
+### Driving an effectiveness effort
+
+The BRAINS framework - Baseline, Research, Act, Invest, Normalize, Sustain.
+
+> A platform team's ultimate goal is to help those users produce more value for
+> the same amount of effort.
+
+> [...] be sure to frame migration and usage instructions from the perspective
+> of the platform **user**, not the platform creator.
+
+### Managing change
+
+BICEPS framework by Paloma Medina
+
+> change is hard and thus needs to be approached with care.
