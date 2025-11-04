@@ -16,8 +16,7 @@ For more details, see the [blog post](https://chadxz.dev/bootstrap/).
 
 To get started with development:
 
-- install Node.js. I recommend using [mise](https://mise.jdx.dev/)
-  - After installing mise, run `mise install` in the project directory
+- install Node.js.
 - install the npm packages. `npm install`
 - start the dev server. `npm start`
 - open your browser to the link printed on the console.
