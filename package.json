@@ -19,7 +19,7 @@
   },
   "author": "Chad McElligott <chad@chadxz.dev>",
   "devDependencies": {
-    "@11ty/eleventy": "^3.0.0",
+    "@11ty/eleventy": "^3.1.2",
     "@11ty/eleventy-plugin-rss": "^2.0.4",
     "@11ty/eleventy-plugin-syntaxhighlight": "^5.0.2",
     "@tailwindcss/typography": "^0.5.16",
