@@ -23,7 +23,7 @@
     "@11ty/eleventy-plugin-rss": "^2.0.4",
     "@11ty/eleventy-plugin-syntaxhighlight": "^5.0.2",
     "@tailwindcss/cli": "^4.1.16",
-    "@tailwindcss/typography": "^0.5.16",
+    "@tailwindcss/typography": "^0.5.19",
     "date-fns": "^4.1.0",
     "eleventy-plugin-reading-time": "0.0.1",
     "husky": "^9.1.7",
