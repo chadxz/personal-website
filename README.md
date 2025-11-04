@@ -6,8 +6,7 @@ Chad McElligott.
 ## details
 
 - 11ty static site generator
-- tailwind css
-- postcss build tool
+- tailwind css v4
 - buttondown.email mailing list
 - deployed to Netlify
 
@@ -17,7 +16,8 @@ For more details, see the [blog post](https://chadxz.dev/bootstrap/).
 
 To get started with development:
 
-- install Node.js. I recommend using [proto](https://moonrepo.dev/proto)
+- install Node.js. I recommend using [mise](https://mise.jdx.dev/)
+  - After installing mise, run `mise install` in the project directory
 - install the npm packages. `npm install`
 - start the dev server. `npm start`
 - open your browser to the link printed on the console.
