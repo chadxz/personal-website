@@ -1,22 +1,22 @@
 ---
 permalink: index.html
 ---
-<div class="flex flex-col md:flex-row m-4 max-w-screen-xl xl:mx-auto">
+<div class="flex flex-col md:flex-row m-4 max-w-(--breakpoint-xl) xl:mx-auto">
     <div class="hidden md:block flex-none w-72 mx-5 md:mr-8 lg:mr-12 lg:w-96">
         <img class="w-full h-auto rounded-md" src="/images/portrait-2.jpg" />
     </div>
     <main>
         <section class="flex flex-col sm:flex-row">
             <div class="flex flex-none items-start justify-center w-full sm:w-48 md:hidden">
-                <img class="max-w-[15rem] w-full h-auto rounded-md" src="/images/portrait-2-small.jpg" />
+                <img class="max-w-60 w-full h-auto rounded-md" src="/images/portrait-2-small.jpg" />
             </div>
             <div class="prose mt-4 sm:mt-0 sm:mx-5 md:mx-0 lg:prose-xl">
-                <h2 class="!mt-2">Hey, I'm Chad.</h2>
+                <h2 class="mt-2!">Hey, I'm Chad.</h2>
                 <p>I'm a software engineer and this is my blog.</p>
             </div>
         </section>
         <section class="prose lg:prose-xl">
-            <h2 class="!mt-5 md:!mt-10">Posts</h2>
+            <h2 class="mt-5! md:mt-10!">Posts</h2>
             <ul>
                 {% for post in collections.posts | reverse %}
                     <li>

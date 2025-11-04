@@ -13,7 +13,7 @@ eleventyComputed:
 permalink: /tags/{{ tag | slug }}/
 ---
 <main class="mx-auto px-2 prose lg:prose-xl">
-    <h1 class="!mb-1 lg:!mb-3 !mt-6">Tagged “{{ tag }}”</h1>
+    <h1 class="mb-1! lg:mb-3! mt-6!">Tagged “{{ tag }}”</h1>
     <ul>
         {% for post in collections[tag] | reverse %}
             <li>
