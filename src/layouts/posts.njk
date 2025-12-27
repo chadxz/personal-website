@@ -2,8 +2,8 @@
 layout: base.njk
 ---
 <article>
-    <h1 class="text-center mb-1! lg:mb-3! mt-6! mx-auto px-2 max-w-5xl text-4xl lg:text-5xl font-bold dark:text-ctp-mauve">{{ title }}</h1>
-    <div id='post-metadata' class="text-zinc-400 flex flex-wrap justify-center whitespace-nowrap mx-auto px-2">
+    <h1 class="post-title text-center mb-1! lg:mb-3! mt-6! mx-auto px-2 max-w-5xl text-4xl lg:text-5xl font-bold dark:text-ctp-mauve">{{ title }}</h1>
+    <div id='post-metadata' class="text-zinc-400 flex flex-wrap justify-center whitespace-nowrap mx-auto px-2 mt-3 mb-4">
         <div class="flex items-center leading-6 space-x-1 mx-3 sm:ml-0 my-1">
             <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 inline-block" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
@@ -46,7 +46,7 @@ layout: base.njk
                 <div class="flex w-full">
                     <input required type="email" name="email" id="subscribe-email" placeholder="your@email.com" class="placeholder-slate-300 text-slate-600 px-2 py-2 relative bg-white rounded-l border-0 shadow-sm outline-hidden focus:outline-hidden focus:ring-3 grow" />
                     <input type="hidden" value="1" name="embed" />
-                    <button class="bg-indigo-500 text-white active:bg-indigo-600 px-4 py-2 rounded-r shadow-sm hover:shadow-md outline-hidden focus:outline-hidden ease-linear transition-all duration-150">Subscribe</button>
+                    <button class="subscribe-btn text-white px-4 py-2 rounded-r shadow-sm hover:shadow-md outline-hidden focus:outline-hidden ease-linear transition-all duration-150">Subscribe</button>
                 </div>
             </form>
         </footer>

@@ -82,6 +82,34 @@ html.dark .prose a:hover {
   color: #95e1d3;
 }
 
+html.dark .prose .header-anchor {
+  color: inherit;
+}
+
+html.dark .social-icons {
+  color: #85c1dc;
+}
+
+html.dark .site-header-name {
+  color: #c6a0f6;
+}
+
+html.dark .post-title {
+  color: #c6a0f6;
+}
+
+.subscribe-btn {
+  background-color: #c6a0f6;
+}
+
+.subscribe-btn:hover {
+  background-color: #b88bf4;
+}
+
+.subscribe-btn:active {
+  background-color: #aa7af0;
+}
+
 html.dark .prose code {
   background-color: #363a4f;
   color: #a6da95;
@@ -354,15 +382,27 @@ html.dark form[name="subscribe"] input[type="email"]:focus {
 }
 
 form[name="subscribe"] button {
-   background-color: #6366f1;
-}
-
-html.dark form[name="subscribe"] button {
   background-color: #6366f1;
 }
 
 form[name="subscribe"] button:hover {
   background-color: #4f46e5;
+}
+
+form[name="subscribe"] button:active {
+  background-color: #4338ca;
+}
+
+html.dark form[name="subscribe"] button {
+  background-color: #7a4cc2;
+}
+
+html.dark form[name="subscribe"] button:hover {
+  background-color: #6a41b0;
+}
+
+html.dark form[name="subscribe"] button:active {
+  background-color: #5b389e;
 }
 
 /* Post metadata styling - consistent color in both modes */
@@ -371,4 +411,10 @@ form[name="subscribe"] button:hover {
   color: #9ca3af !important;
 }
 
-
+/* Sharing frame background */
+.sharing-frame-background {
+  width: 600px;
+  height: 315px;
+  background-size: contain;
+  background-image: url('/images/og/default.jpg');
+}

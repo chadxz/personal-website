@@ -101,9 +101,38 @@ window.themeToggle = {
   getEffective: (pref) => getEffectiveTheme(pref || getThemePreference()),
 };
 
-// Auto-initialize when DOM is ready
+function initThemeToggleButtons() {
+  const toggleButtons = document.querySelectorAll('.theme-toggle-btn');
+  if (!toggleButtons.length) return;
+
+  function updateActiveButton() {
+    const currentTheme = getThemePreference();
+    toggleButtons.forEach((btn) => {
+      const theme = btn.getAttribute('data-theme');
+      const isActive = theme === currentTheme;
+      btn.classList.toggle('active', isActive);
+      btn.setAttribute('aria-pressed', String(isActive));
+    });
+  }
+
+  toggleButtons.forEach((btn) => {
+    btn.addEventListener('click', () => {
+      const theme = btn.getAttribute('data-theme');
+      setTheme(theme);
+      updateActiveButton();
+    });
+  });
+
+  updateActiveButton();
+  window.addEventListener('theme-changed', updateActiveButton);
+}
+
+// Apply theme immediately to minimize FOUC.
+initTheme();
+
+// Initialize button behavior when DOM is ready.
 if (document.readyState !== 'loading') {
-  initTheme();
+  initThemeToggleButtons();
 } else {
-  document.addEventListener('DOMContentLoaded', initTheme);
+  document.addEventListener('DOMContentLoaded', initThemeToggleButtons);
 }

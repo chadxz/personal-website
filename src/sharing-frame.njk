@@ -8,19 +8,10 @@ permalink: /sharing-frame.html
     <meta charset="utf-8">
     <title>Social sharing image generator</title>
     <link rel="stylesheet" href="/style.css?v={% version %}" type="text/css" media="all" />
-
-    <style>
-        .background {
-            width: 600px;
-            height: 315px;
-            background-size: contain;
-            background-image: url('images/og/default.jpg');
-        }
-    </style>
 </head>
 <body>
 
-<div class="background flex flex-col justify-center items-center text-zinc-100 font-sans">
+<div class="sharing-frame-background flex flex-col justify-center items-center text-zinc-100 font-sans">
     <div id="slot" class="text-2xl mb-6 max-w-xs font-medium text-center"></div>
     <div class="flex items-center">
         <img src="/images/avatar-3.png" class="rounded-full w-16 h-16 mr-2 shadow-sm shadow-lg" />
@@ -28,14 +19,7 @@ permalink: /sharing-frame.html
     </div>
 </div>
 
-<script>
-  const queryString = window.location.search
-  const urlParams = new URLSearchParams(queryString)
-  const title = urlParams.get("title")
-  const slot = document.getElementById("slot")
-
-  title ? slot.innerHTML = title : slot.remove();
-</script>
+<script src="/sharing-frame.js?v={% version %}"></script>
 
 </body>
 </html>

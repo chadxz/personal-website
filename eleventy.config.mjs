@@ -53,6 +53,7 @@ export default async function (eleventyConfig) {
   eleventyConfig
     .addPassthroughCopy('src/humans.txt')
     .addPassthroughCopy('src/theme-toggle.js')
+    .addPassthroughCopy('src/sharing-frame.js')
     .addPassthroughCopy({ 'src/*.jpg': '/' })
     .addPassthroughCopy({ 'src/*.png': '/' })
     .addPassthroughCopy({ 'src/*.ico': '/' })
