@@ -12,7 +12,9 @@ export default async function (eleventyConfig) {
   eleventyConfig.setDataDeepMerge(true);
   eleventyConfig.addPlugin(pluginRss);
   eleventyConfig.addPlugin(readingTime);
-  eleventyConfig.addPlugin(syntaxHighlight);
+  eleventyConfig.addPlugin(syntaxHighlight, {
+    preAttributes: { tabindex: 0 }
+  });
 
   const markdownLib = markdownIt({ html: true, linkify: true }).use(markdownItAnchor, {
     permalink: markdownItAnchor.permalink.headerLink({ safariReaderFix: true }),
@@ -36,10 +38,21 @@ export default async function (eleventyConfig) {
     ({ fileSlug }) => `https://chadxz.dev/images/og/${fileSlug || 'home'}.jpg`
   );
 
-  eleventyConfig.setServerOptions({ watch: ['build/dist/style.css'] });
+  eleventyConfig.setServerOptions({
+    watch: ['build/dist/style.css'],
+    middleware: [
+      (req, res, next) => {
+        if (req.url.endsWith('.html') || req.url.endsWith('/')) {
+          res.setHeader('Cache-Control', 'no-cache, no-store, must-revalidate');
+        }
+        next();
+      }
+    ]
+  });
 
   eleventyConfig
     .addPassthroughCopy('src/humans.txt')
+    .addPassthroughCopy('src/theme-toggle.js')
     .addPassthroughCopy({ 'src/*.jpg': '/' })
     .addPassthroughCopy({ 'src/*.png': '/' })
     .addPassthroughCopy({ 'src/*.ico': '/' })

@@ -1,54 +1,54 @@
 ---
 layout: base.njk
 ---
-<main class="mx-auto px-2 prose lg:prose-xl">
-    <article>
-        <h1 class="text-center sm:text-left mb-1! lg:mb-3! mt-6!">{{ title }}</h1>
-        <div id='post-metadata' class="text-zinc-400 flex flex-wrap justify-center whitespace-nowrap">
-            <div class="flex items-center leading-6 space-x-1 mx-3 sm:ml-0 my-1">
-                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 inline-block" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
-                </svg>
-                <time datetime="{{ date | dateToRfc3339 }}">{{ date | formatDate('MMMM do, yyyy') }}</time>
-            </div>
-
-            <div class="flex items-center leading-6 space-x-1 mx-3 my-1">
-                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 inline" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
-                </svg>
-                <span title="Average based on {{ settings.wpm }} words per minute reading speed">{{ content | readingTime({ speed: settings.wpm }) }} read</span>
-            </div>
-
-            <div class="flex items-center leading-6 space-x-1 mx-3 my-1">
-                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 inline" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 7h.01M7 3h5c.512 0 1.024.195 1.414.586l7 7a2 2 0 010 2.828l-7 7a2 2 0 01-2.828 0l-7-7A1.994 1.994 0 013 12V7a4 4 0 014-4z" />
-                </svg>
-                <span>
-                    {%- for tag in tags | reject('eq', 'posts') | sort -%}
-                        {%- set tagUrl %}/tags/{{ tag | slug }}/{%- endset -%}
-                        {%- if loop.index > 1 -%},&nbsp;{%- endif -%}
-                        <a href="{{ tagUrl | url }}" class="text-zinc-400! no-underline! font-normal!">{{ tag }}</a>
-                    {%- endfor -%}
-                </span>
-            </div>
+<article>
+    <h1 class="text-center mb-1! lg:mb-3! mt-6! mx-auto px-2 max-w-5xl text-4xl lg:text-5xl font-bold dark:text-ctp-mauve">{{ title }}</h1>
+    <div id='post-metadata' class="text-zinc-400 flex flex-wrap justify-center whitespace-nowrap mx-auto px-2">
+        <div class="flex items-center leading-6 space-x-1 mx-3 sm:ml-0 my-1">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 inline-block" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
+            </svg>
+            <time datetime="{{ date | dateToRfc3339 }}">{{ date | formatDate('MMMM do, yyyy') }}</time>
         </div>
+
+        <div class="flex items-center leading-6 space-x-1 mx-3 my-1">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 inline" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+            </svg>
+            <span title="Average based on {{ settings.wpm }} words per minute reading speed">{{ content | readingTime({ speed: settings.wpm }) }} read</span>
+        </div>
+
+        <div class="flex items-center leading-6 space-x-1 mx-3 my-1">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 inline" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 7h.01M7 3h5c.512 0 1.024.195 1.414.586l7 7a2 2 0 010 2.828l-7 7a2 2 0 01-2.828 0l-7-7A1.994 1.994 0 013 12V7a4 4 0 014-4z" />
+            </svg>
+            <span>
+                {%- for tag in tags | reject('eq', 'posts') | sort -%}
+                    {%- set tagUrl %}/tags/{{ tag | slug }}/{%- endset -%}
+                    {%- if loop.index > 1 -%},&nbsp;{%- endif -%}
+                    <a href="{{ tagUrl | url }}" class="text-zinc-400! no-underline! font-normal!">{{ tag }}</a>
+                {%- endfor -%}
+            </span>
+        </div>
+    </div>
+    <main class="mx-auto px-2 prose lg:prose-xl">
         {{ content | safe }}
-    </article>
-    <footer>
-        <form
-            action="https://buttondown.email/api/emails/embed-subscribe/chadxz"
-            method="post"
-            target="popupwindow"
-            onsubmit="window.open('https://buttondown.email/chadxz', 'popupwindow')"
-            name="subscribe"
-            class="rounded-xl shadow-md p-5 pt-0.5 mb-10 bg-indigo-100"
-        >
-            <p>Interested in staying in touch? <a href="https://www.linkedin.com/in/chadmcelligott/" title="Connect with me on LinkedIn">Connect with me on LinkedIn</a>, <a href='https://bsky.app/profile/chadxz.dev' title='Follow me on Bluesky'>Follow me on Bluesky</a>, or enter your email below and I will send you a note when I post new content.</p>
-            <div class="flex w-full">
-                <input required type="email" name="email" id="subscribe-email" placeholder="your@email.com" class="placeholder-slate-300 text-slate-600 px-2 py-2 relative bg-white rounded-l border-0 shadow-sm outline-hidden focus:outline-hidden focus:ring-3 grow" />
-                <input type="hidden" value="1" name="embed" />
-                <button class="bg-indigo-500 text-white active:bg-indigo-600 px-4 py-2 rounded-r shadow-sm hover:shadow-md outline-hidden focus:outline-hidden ease-linear transition-all duration-150">Subscribe</button>
-            </div>
-        </form>
-    </footer>
-</main>
+        <footer>
+            <form
+                action="https://buttondown.email/api/emails/embed-subscribe/chadxz"
+                method="post"
+                target="popupwindow"
+                onsubmit="window.open('https://buttondown.email/chadxz', 'popupwindow')"
+                name="subscribe"
+                class="rounded-xl shadow-md p-5 pt-0.5 mb-10 bg-indigo-100"
+            >
+                <p>Interested in staying in touch? <a href="https://www.linkedin.com/in/chadmcelligott/" title="Connect with me on LinkedIn">Connect with me on LinkedIn</a>, <a href='https://bsky.app/profile/chadxz.dev' title='Follow me on Bluesky'>Follow me on Bluesky</a>, or enter your email below and I will send you a note when I post new content.</p>
+                <div class="flex w-full">
+                    <input required type="email" name="email" id="subscribe-email" placeholder="your@email.com" class="placeholder-slate-300 text-slate-600 px-2 py-2 relative bg-white rounded-l border-0 shadow-sm outline-hidden focus:outline-hidden focus:ring-3 grow" />
+                    <input type="hidden" value="1" name="embed" />
+                    <button class="bg-indigo-500 text-white active:bg-indigo-600 px-4 py-2 rounded-r shadow-sm hover:shadow-md outline-hidden focus:outline-hidden ease-linear transition-all duration-150">Subscribe</button>
+                </div>
+            </form>
+        </footer>
+    </main>
+</article>

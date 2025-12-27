@@ -1,4 +1,5 @@
 @import 'tailwindcss';
+@import 'prismjs/plugins/diff-highlight/prism-diff-highlight.css' layer(utilities);
 @import 'prism-themes/themes/prism-coldark-cold.css' layer(utilities);
 
 @plugin '@tailwindcss/typography';
@@ -28,11 +29,346 @@
 }
 
 h2:hover .direct-link, h3:hover .direct-link, h4:hover .direct-link {
-  visibility: visible;
-  text-decoration: none;
+   visibility: visible;
+   text-decoration: none;
+}
+
+h1 {
+   text-wrap: balance;
 }
 
 .prose blockquote p {
     color: #5a5d79;
     font-weight: normal;
 }
+
+/* Dark mode styles */
+:root {
+  color-scheme: light;
+}
+
+html.dark {
+  color-scheme: dark;
+}
+
+html.dark {
+  background-color: #24273a;
+  color: #cad1f5;
+}
+
+html.dark body {
+  background-color: #24273a;
+  color: #cad1f5;
+}
+
+html.dark .prose {
+  color: #cad1f5;
+}
+
+html.dark .prose h1,
+html.dark .prose h2,
+html.dark .prose h3,
+html.dark .prose h4,
+html.dark .prose h5,
+html.dark .prose h6 {
+  color: #c6a0f6;
+}
+
+html.dark .prose a {
+  color: #85c1dc;
+}
+
+html.dark .prose a:hover {
+  color: #95e1d3;
+}
+
+html.dark .prose code {
+  background-color: #363a4f;
+  color: #a6da95;
+  border-color: #494d64;
+}
+
+html.dark .prose pre {
+  background-color: #1e2030;
+  border-color: #363a4f;
+}
+
+html.dark .prose blockquote {
+  border-color: #494d64;
+}
+
+html.dark .prose blockquote p {
+  color: #b8c5d6;
+}
+
+html.dark .prose hr {
+  border-color: #494d64;
+}
+
+html.dark .prose strong {
+   color: #cad1f5;
+}
+
+html.dark .prose em {
+   color: #cad1f5;
+}
+
+html.dark hr {
+   border-color: #494d64;
+}
+
+/* Dark mode syntax highlighting - at the end to override Prism theme */
+html.dark pre,
+html.dark pre code {
+   background-color: #1e2030 !important;
+   color: #cad1f5 !important;
+}
+
+html.dark .token.comment,
+html.dark .token.prolog,
+html.dark .token.doctype,
+html.dark .token.cdata {
+   color: #8087a2 !important;
+}
+
+html.dark .token.punctuation {
+   color: #b8c5d6 !important;
+}
+
+html.dark .token.property,
+html.dark .token.tag,
+html.dark .token.constant,
+html.dark .token.symbol,
+html.dark .token.deleted {
+   color: #f5a97f !important;
+}
+
+html.dark .token.boolean,
+html.dark .token.number {
+   color: #f5a97f !important;
+}
+
+html.dark .token.selector,
+html.dark .token.attr-name,
+html.dark .token.string,
+html.dark .token.char,
+html.dark .token.builtin,
+html.dark .token.inserted {
+   color: #a6da95 !important;
+}
+
+html.dark .token.operator,
+html.dark .token.entity,
+html.dark .token.url {
+   color: #95e1d3 !important;
+}
+
+html.dark .token.atrule,
+html.dark .token.attr-value,
+html.dark .token.keyword {
+   color: #c6a0f6 !important;
+}
+
+html.dark .token.function,
+html.dark .token.class-name {
+   color: #85c1dc !important;
+}
+
+html.dark .token.variable {
+   color: #95e1d3 !important;
+}
+
+html.dark .token.attr-value {
+   color: #a6da95 !important;
+}
+
+html.dark .token.attr-value > .token.punctuation {
+   color: #a6da95 !important;
+}
+
+/* Light mode - override dark Prism theme for light backgrounds */
+html:not(.dark) pre {
+   background-color: hsl(230, 1%, 98%) !important;
+}
+
+html:not(.dark) .token.comment,
+html:not(.dark) .token.prolog,
+html:not(.dark) .token.cdata {
+   color: hsl(230, 4%, 64%) !important;
+}
+
+html:not(.dark) .token.doctype,
+html:not(.dark) .token.punctuation,
+html:not(.dark) .token.entity {
+   color: hsl(230, 8%, 24%) !important;
+}
+
+html:not(.dark) .token.attr-name,
+html:not(.dark) .token.class-name,
+html:not(.dark) .token.boolean,
+html:not(.dark) .token.constant,
+html:not(.dark) .token.number,
+html:not(.dark) .token.atrule {
+   color: hsl(35, 99%, 36%) !important;
+}
+
+html:not(.dark) .token.keyword {
+   color: hsl(301, 63%, 40%) !important;
+}
+
+html:not(.dark) .token.property,
+html:not(.dark) .token.selector,
+html:not(.dark) .token.string,
+html:not(.dark) .token.builtin {
+   color: hsl(119, 34%, 47%) !important;
+}
+
+html:not(.dark) .token.operator,
+html:not(.dark) .token.url {
+   color: hsl(198, 99%, 37%) !important;
+}
+
+/* Diff highlighting */
+.token.inserted-sign {
+   background-color: rgba(166, 218, 149, 0.2) !important;
+}
+
+.token.deleted-sign {
+   background-color: rgba(245, 169, 127, 0.2) !important;
+}
+
+html.dark .token.inserted-sign {
+   background-color: rgba(166, 218, 149, 0.15) !important;
+}
+
+html.dark .token.deleted-sign {
+   background-color: rgba(245, 169, 127, 0.15) !important;
+}
+
+/* Light mode colors (default) */
+body {
+  color: #1f2937;
+  background-color: #ffffff;
+}
+
+/* Theme toggle container */
+.theme-toggle-group {
+  background-color: #e5e7eb;
+}
+
+html.dark .theme-toggle-group {
+  background-color: #363a4f;
+}
+
+/* Theme toggle button styles */
+.theme-toggle-btn {
+  background-color: transparent;
+  color: #6b7280;
+  cursor: pointer;
+  border: none;
+  padding: 0.5rem;
+  border-radius: 0.375rem;
+  transition: background-color 0.2s ease;
+}
+
+html.dark .theme-toggle-btn {
+  color: #b8c5d6;
+}
+
+.theme-toggle-btn:hover {
+  background-color: #d1d5db;
+}
+
+html.dark .theme-toggle-btn:hover {
+  background-color: #494d64;
+}
+
+.theme-toggle-btn.active {
+  background-color: #f3f4f6;
+  color: #1f2937;
+}
+
+html.dark .theme-toggle-btn.active {
+  background-color: #494d64;
+  color: #cad1f5;
+}
+
+.theme-toggle-btn:focus-visible {
+  outline: 2px solid #4f46e5;
+  outline-offset: 2px;
+}
+
+html.dark .theme-toggle-btn:focus-visible {
+  outline-color: #c6a0f6;
+}
+
+/* Code block focus styles for keyboard navigation */
+pre:focus-visible {
+  outline: 2px solid #4f46e5;
+  outline-offset: 4px;
+}
+
+html.dark pre:focus-visible {
+  outline-color: #c6a0f6;
+}
+
+/* Newsletter form styling */
+form[name="subscribe"] {
+   background-color: #e0e7ff;
+}
+
+html.dark form[name="subscribe"] {
+   background-color: #363a4f;
+}
+
+form[name="subscribe"] p {
+   color: inherit;
+}
+
+html.dark form[name="subscribe"] p {
+   color: #cad1f5;
+}
+
+form[name="subscribe"] input[type="email"] {
+   background-color: #ffffff;
+   color: #1f2937;
+   border-color: #d1d5db;
+}
+
+html.dark form[name="subscribe"] input[type="email"] {
+   background-color: #1e2030;
+   color: #cad1f5;
+   border-color: #494d64;
+}
+
+html.dark form[name="subscribe"] input[type="email"]::placeholder {
+   color: #8087a2;
+}
+
+form[name="subscribe"] input[type="email"]:focus {
+   box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.1);
+}
+
+html.dark form[name="subscribe"] input[type="email"]:focus {
+   box-shadow: 0 0 0 3px rgba(197, 160, 246, 0.1);
+}
+
+form[name="subscribe"] button {
+   background-color: #6366f1;
+}
+
+html.dark form[name="subscribe"] button {
+  background-color: #6366f1;
+}
+
+form[name="subscribe"] button:hover {
+  background-color: #4f46e5;
+}
+
+/* Post metadata styling - consistent color in both modes */
+#post-metadata,
+#post-metadata * {
+  color: #9ca3af !important;
+}
+
+

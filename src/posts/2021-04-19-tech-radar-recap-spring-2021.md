@@ -135,7 +135,7 @@ whereas you could instead code only to the keys you need and ignore the
 remainder. That way if the payload changed to add a new key:
 
 <!-- prettier-ignore -->
-```diff
+```diff-json
 {
   "id": 123,
   "author": {

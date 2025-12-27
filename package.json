@@ -37,6 +37,7 @@
     "puppeteer": "^24.34.0",
     "rimraf": "^6.1.2",
     "tailwindcss": "^4.1.18",
+    "prismjs": "^1.30.0",
     "untun": "^0.1.3"
   },
   "lint-staged": {
