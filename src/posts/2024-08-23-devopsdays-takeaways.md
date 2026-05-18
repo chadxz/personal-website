@@ -152,14 +152,15 @@ how their product progresses!
 
 <img src="/images/dod-recap-2024/crystaldb.png" alt="CrystalDB" class="float-right ml-4 mb-2 w-1/4">
 
-Another conversation was with [Johann Schleier-Smith](https://www.linkedin.com/in/jssmith/)
-about the work he is doing to provide automated ops for PostgreSQL with the
-startup he has founded called [CrystalDB](https://www.crystaldb.cloud/). I
-shared the pains Smartrr has been having with performance and how having some
-baked-in intelligence would help us a lot. He's got an extensive [blog
-post][crystaldb blog post] detailing the opportunity they see for applying AI &
-ML to operating PostgreSQL and are developing both open source and
-subscription-based solutions for the PostgreSQL user community.
+Another conversation was with
+[Johann Schleier-Smith](https://www.linkedin.com/in/jssmith/) about the work he
+is doing to provide automated ops for PostgreSQL with the startup he has founded
+called [CrystalDB](https://www.crystaldb.cloud/). I shared the pains Smartrr has
+been having with performance and how having some baked-in intelligence would
+help us a lot. He's got an extensive [blog post][crystaldb blog post] detailing
+the opportunity they see for applying AI & ML to operating PostgreSQL and are
+developing both open source and subscription-based solutions for the PostgreSQL
+user community.
 
 [crystaldb blog post]:
   https://www.crystaldb.cloud/blog/post/keeping-postgresql-in-the-lead-with-ai-for-systems
@@ -182,4 +183,5 @@ that you can take part in as an employee or co-founder, creates a community you
 can source solid candidates from as colleagues or learn from, and provides you
 opportunities to grow yourself by teaching, speaking and mentoring others. I
 strongly recommend DevOpsDays and am thankful for the organizing committee of
-DevOpsDays Birmingham, their sponsors, and my employer [Smartrr](https://smartrr.com) for sending me. 👏
+DevOpsDays Birmingham, their sponsors, and my employer
+[Smartrr](https://smartrr.com) for sending me. 👏

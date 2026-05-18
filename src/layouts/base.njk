@@ -48,47 +48,52 @@
                 <img src="/header-avatar-2.jpg" class="w-14 h-14 rounded-md inline mr-2" />
                 <span class="site-header-name font-sans text-gray-900 dark:text-ctp-mauve text-xl align-middle hidden sm:inline font-medium">Chad McElligott</span>
             </a>
-            <div class="flex items-center gap-4 sm:gap-5">
-                <div class="theme-toggle-group inline-flex rounded-md bg-gray-200 dark:bg-ctp-surface-0 p-0.5 gap-0.5" role="group" aria-label="Color theme">
+            <div class="flex items-center gap-3">
+                <div class="theme-toggle-menu relative">
                     <button
-                        id="theme-system"
+                        id="theme-toggle-trigger"
                         type="button"
-                        class="theme-toggle-btn p-2 rounded text-gray-700 dark:text-ctp-text transition-colors"
-                        data-theme="system"
-                        aria-label="Use system theme"
-                        aria-pressed="false"
+                        class="theme-toggle-trigger"
+                        aria-label="Theme menu"
+                        aria-haspopup="menu"
+                        aria-expanded="false"
+                        title="System theme"
                     >
-                        <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="w-4 h-4" viewBox="0 0 24 24" aria-hidden="true">
-                            <rect x="2" y="3" width="20" height="14" rx="2" ry="2" stroke="currentColor" stroke-width="1" fill="none"/>
-                            <path d="M8 21h8M12 17v4" stroke="currentColor" stroke-width="1" fill="none"/>
+                        <svg class="theme-toggle-icon theme-toggle-icon-system" xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true">
+                            <path d="M19 17.4598C17.8179 17.9944 16.5058 18.292 15.1241 18.292C9.92376 18.292 5.70804 14.0762 5.70804 8.87588C5.70804 7.49422 6.00562 6.18206 6.5402 5C3.27319 6.47747 1 9.76523 1 13.5839C1 18.7843 5.21572 23 10.4161 23C14.2348 23 17.5225 20.7268 19 17.4598Z" />
+                            <path d="M19.4888 4.61889L18.1877 5.91996M12.9834 3.7265L12.9834 1.8865M20.3809 11.124L22.2209 11.124M9.73068 7.87158C11.5271 6.07516 14.4397 6.07516 16.2361 7.87158C18.0325 9.66799 18.0325 12.5805 16.2361 14.377" />
                         </svg>
                     </button>
-                    <button
-                        id="theme-light"
-                        type="button"
-                        class="theme-toggle-btn p-2 rounded text-gray-700 dark:text-ctp-text transition-colors"
-                        data-theme="light"
-                        aria-label="Light mode"
-                        aria-pressed="false"
+                    <div
+                        id="theme-toggle-options"
+                        class="theme-toggle-options"
+                        role="menu"
+                        aria-labelledby="theme-toggle-trigger"
+                        hidden
                     >
-                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-width="1.5" class="w-4 h-4" viewBox="0 0 24 24" aria-hidden="true">
-                            <circle cx="12" cy="12" r="5"/>
-                            <path d="M12 1v6M12 17v6M4.22 4.22l4.24 4.24M15.54 15.54l4.24 4.24M1 12h6M17 12h6M4.22 19.78l4.24-4.24M15.54 8.46l4.24-4.24"/>
-                        </svg>
-                    </button>
-                    <button
-                        id="theme-dark"
-                        type="button"
-                        class="theme-toggle-btn p-2 rounded text-gray-700 dark:text-ctp-text transition-colors"
-                        data-theme="dark"
-                        aria-label="Dark mode"
-                        aria-pressed="false"
-                    >
-                        <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="w-4 h-4" viewBox="0 0 24 24" aria-hidden="true">
-                            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
-                        </svg>
-                    </button>
+                        <button type="button" class="theme-toggle-option" data-theme="system" role="menuitemradio" aria-checked="false">
+                            <svg class="theme-toggle-option-icon theme-toggle-icon-system" xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true">
+                                <path d="M19 17.4598C17.8179 17.9944 16.5058 18.292 15.1241 18.292C9.92376 18.292 5.70804 14.0762 5.70804 8.87588C5.70804 7.49422 6.00562 6.18206 6.5402 5C3.27319 6.47747 1 9.76523 1 13.5839C1 18.7843 5.21572 23 10.4161 23C14.2348 23 17.5225 20.7268 19 17.4598Z" />
+                                <path d="M19.4888 4.61889L18.1877 5.91996M12.9834 3.7265L12.9834 1.8865M20.3809 11.124L22.2209 11.124M9.73068 7.87158C11.5271 6.07516 14.4397 6.07516 16.2361 7.87158C18.0325 9.66799 18.0325 12.5805 16.2361 14.377" />
+                            </svg>
+                            <span>System theme</span>
+                        </button>
+                        <button type="button" class="theme-toggle-option" data-theme="light" role="menuitemradio" aria-checked="false">
+                            <svg class="theme-toggle-option-icon theme-toggle-icon-light" xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24" aria-hidden="true">
+                                <circle cx="12" cy="12" r="4.5"/>
+                                <path d="M12 2v3M12 19v3M4.93 4.93l2.12 2.12M16.95 16.95l2.12 2.12M2 12h3M19 12h3M4.93 19.07l2.12-2.12M16.95 7.05l2.12-2.12"/>
+                            </svg>
+                            <span>Light theme</span>
+                        </button>
+                        <button type="button" class="theme-toggle-option" data-theme="dark" role="menuitemradio" aria-checked="false">
+                            <svg class="theme-toggle-option-icon theme-toggle-icon-dark" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                                <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
+                            </svg>
+                            <span>Dark theme</span>
+                        </button>
+                    </div>
                 </div>
+                <div class="theme-action-divider hidden sm:block" aria-hidden="true"></div>
                 <div class="social-icons flex items-center gap-3 sm:gap-4 text-teal-500">
                 <a href="https://www.linkedin.com/in/chadmcelligott/" title="Connect on LinkedIn">
                     <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" fill="currentColor" class="block sm:w-8 sm:h-8" viewBox="0 0 16 16">
