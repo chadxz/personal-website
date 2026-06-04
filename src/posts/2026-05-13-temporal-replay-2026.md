@@ -58,11 +58,12 @@ case, the same themes kept showing up: managing state, gracefully handling
 failure, and work that doesn't finish in a single request.
 
 [Shabnam Emdadi](https://replay.temporal.io/speakers/shabnam) of Shopify shared
-a clear picture of this in her talk _From Normalizing Complexity to Recognizing
-the Price_. She highlighted how teams often delay orchestration because they
-think they don't need it yet, then end up building pieces of it anyway. A retry
-here, a status table there, a support runbook off to the side, and eventually
-the team owns a small workflow engine they never intended to build.
+a clear picture of this in her talk
+[_From Normalizing Complexity to Recognizing the Price_](https://www.youtube.com/watch?v=3SS7jZn54BU).
+She highlighted how teams often delay orchestration because they think they
+don't need it yet, then end up building pieces of it anyway. A retry here, a
+status table there, a support runbook off to the side, and eventually the team
+owns a small workflow engine they never intended to build.
 
 That's the habit I want us to get better at spotting. When teams are solving
 reliability problems with point solutions, we should be able to recognize the
@@ -127,12 +128,13 @@ picture gives us an opportunity for early feedback and unblocks simpler use
 cases while retaining the extensibility needed to fulfill the grander vision.
 
 Listening to [Rob Zienert](https://replay.temporal.io/speakers/rob-zienert)'s
-talk _The Path to Temporal General Availability at Netflix_ helped me see how
-that would play out long term as we build out Temporal on our platform. So many
-of his early sentiments matched my own experience: patient support work, careful
-scope control, and being real with developers about what's currently supported
-and what isn't. In his talk, he described the slow journey from scratching his
-own itch to
+talk
+[_The Path to Temporal General Availability at Netflix_](https://www.youtube.com/watch?v=0-ChPo8xZqA)
+helped me see how that would play out long term as we build out Temporal on our
+platform. So many of his early sentiments matched my own experience: patient
+support work, careful scope control, and being real with developers about what's
+currently supported and what isn't. In his talk, he described the slow journey
+from scratching his own itch to
 [solve reliability problems in Spinnaker](https://netflixtechblog.com/how-temporal-powers-reliable-cloud-operations-at-netflix-73c69ccb5953),
 to offering Temporal to his colleagues on a best-effort basis alongside his
 normal Spinnaker work, to finally having enough enterprise integration and
